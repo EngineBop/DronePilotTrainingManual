@@ -163,10 +163,67 @@ Choosing the correct setup method for your drone mission is critical to achievin
 ---
 
 ## ⚠️ 4. Emergency Procedures
-- Low Battery: RTH at 25–30%
-- Signal Loss: Auto RTH if configured
-- RTK Loss: Pause and reconnect
-- Weather Change: Pause and land manually
+
+In any mission-critical operation, being prepared for unexpected events is essential. The following emergency procedures cover typical in-flight issues and should be rehearsed during training. Always log any incident and report according to your organisation’s SOPs.
+
+---
+
+### 🔋 Low Battery
+
+- **Threshold**: Begin Return-to-Home (RTH) at **25–30%** battery level depending on environmental conditions (wind, distance).
+- **Action**:
+  - Monitor battery warnings via DJI Pilot 2.
+  - Initiate manual RTH or confirm auto-RTH triggers.
+  - Avoid pushing limits to final 10% unless in visual proximity and low altitude.
+- **Best Practice**: Set low battery warning and critical battery action (e.g., Auto Land or Auto RTH) in app settings.
+
+---
+
+### 📶 Signal Loss (RC Disconnect)
+
+- **Default Behaviour**: Most systems (e.g., DJI) will initiate Auto RTH after **3–5 seconds** of signal loss if pre-configured.
+- **Action**:
+  - Remain calm and monitor the app display for signal reacquisition.
+  - If Auto RTH fails, move to higher ground or open area to restore line of sight.
+- **Prevention**:
+  - Avoid flying behind buildings, terrain, or vegetation.
+  - Maintain visual line-of-sight (VLOS) at all times.
+
+---
+
+### 📡 RTK Signal Loss
+
+- **Symptoms**: Sudden drop in position accuracy (e.g., from cm-level to metres), GNSS alert in app.
+- **Action**:
+  - **Pause the flight** using the controller or app.
+  - Wait briefly for RTK to reconnect.
+  - If signal does not return, continue flight under GNSS-only mode *only if safe*.
+- **Best Practice**:
+  - Verify RTK status before takeoff.
+  - Stay within the base station or NTRIP coverage area.
+  - Consider GCPs or checkpoints for post-flight QA/QC if RTK drops persist.
+
+---
+
+### 🌦️ Sudden Weather Change
+
+- **Risks**: Wind gusts, sudden rain, visibility loss, temperature drops.
+- **Action**:
+  - **Pause flight** immediately.
+  - Assess direction and intensity of change.
+  - **Land manually** at the nearest safe location—do not rely on RTH if strong wind is present.
+- **Prevention**:
+  - Use real-time weather tools (e.g., UAV Forecast, Windy).
+  - Avoid launching if rain is forecast or cloud ceiling is low.
+
+---
+
+### 🧠 General Emergency Tips
+
+- **Always keep the home point updated** if flying dynamically.
+- **Have an alternate landing zone in mind** before takeoff.
+- **Use screen recording** if possible during abnormal events for post-flight review.
+- **Maintain calm, deliberate control inputs** in all scenarios.
 
 ---
 
@@ -185,39 +242,187 @@ ProjectName/
 ├── 03_Raw_RTK/
 ├── 04_Checkpoints/
 └── 05_Exports/
-```
 
 ---
 
 ## 🧰 6. DJI Terra – GCP Alignment Workflow
 
-### 🎯 Goal:
-Align the photogrammetry model with high-accuracy GCPs.
+Accurate georeferencing of photogrammetry outputs is essential for engineering, surveying, and compliance workflows. Aligning your model with high-accuracy Ground Control Points (GCPs) ensures the final outputs (e.g., orthophotos, DEMs, contours) meet horizontal and vertical positional accuracy targets.
 
-### Step-by-Step:
-1. 📁 Import Images: Create new 2D/3D mission and add captured images.
-2. 📌 Import GCPs: Go to GCP Manager and load CSV file.
-3. 🖼️ Tag GCPs: Tag each GCP in 3–5 images.
-4. ✅ Check RMS Error: Target <5 cm horizontal, <10 cm vertical.
-5. 🧠 Reprocess with GCPs: Run model with High Accuracy.
+---
+
+### 🎯 Goal
+
+Align the drone imagery with surveyed Ground Control Points to:
+- Improve spatial accuracy beyond GNSS-only image positions.
+- Reduce geometric distortion in models.
+- Ensure outputs match real-world coordinates (e.g., NZTM or local grid).
+- Meet horizontal and vertical RMSE thresholds suitable for asset or earthworks projects.
+
+---
+
+### 🪜 Step-by-Step Workflow in DJI Terra
+
+#### 1. 📁 Create New Mission and Import Images
+- Launch **DJI Terra** and create a **2D Map** or **3D Model** project based on your mission type.
+- Click **"Add Images"** and select the folder containing your `.JPG` images.
+  - ✅ *Tip*: Ensure filenames haven’t changed since flight.
+- Confirm the image coordinate system matches your camera metadata (typically WGS84).
+
+---
+
+#### 2. 📌 Import GCPs (Ground Control Points)
+- Navigate to the **GCP Management** tab on the right panel.
+- Click **“Import”** and load your GCP file (CSV or TXT).
+  - Your file must include:
+    ```
+    Point Name, Latitude, Longitude, Altitude
+    ```
+    or for local grid:
+    ```
+    Point Name, Easting, Northing, Elevation
+    ```
+  - ✅ *Tip*: Ensure GCP coordinate system matches project CRS. Convert using a GIS tool if needed.
+  - ✏️ Rename GCPs for clarity if they use ambiguous labels (e.g., “GCP01”, “CHK02”).
+
+---
+
+#### 3. 🖼️ Tag GCPs in Images
+- For each GCP, select **3–5 high-quality images** that clearly show the ground target.
+- Zoom in and click directly on the center of the physical marker.
+  - The more accurately you tag, the better the model alignment.
+  - Use oblique and nadir images for better geometry if available.
+- DJI Terra may assist with predictive tagging if image overlap is good.
+  - ✅ *Tip*: Use cross-shaped GCP markers with high contrast for best visibility.
+
+---
+
+#### 4. ✅ Check RMS Error and Residuals
+- After tagging, DJI Terra will calculate the **Root Mean Square Error (RMSE)** for each point.
+- Review both:
+  - **Horizontal RMSE** – Aim for **<5 cm**
+  - **Vertical RMSE** – Aim for **<10 cm**
+- Investigate outliers:
+  - Mis-tagged points
+  - Low-quality images
+  - Incorrect GCP elevations
+- Use **Checkpoints** (non-adjusted GCPs) to validate accuracy independently.
+  - 🧠 *Best Practice*: Use at least 2 checkpoints for every 5 GCPs.
+
+---
+
+#### 5. 🧠 Reprocess Model with GCPs
+- Once satisfied with tagging and error thresholds:
+  - Click **Reconstruct** and select **"High Accuracy"** mode.
+  - Use **Real-Time Kinematic (RTK)** or **Post-Processed Kinematic (PPK)** image positions if available.
+- Enable **“Use GCPs for Georeferencing”** during processing.
+- When complete, review the final model alignment and export:
+  - Orthomosaic
+  - Digital Surface Model (DSM) or DEM
+  - Contours
+  - Point Cloud (if 3D)
+
+---
+
+### 📦 Output Validation Checklist
+
+| Checkpoint | Pass Criteria |
+|------------|---------------|
+| ✔️ RMSE     | <5 cm XY, <10 cm Z |
+| ✔️ Visual    | Model aligns tightly to road edges, buildings, fences, drains |
+| ✔️ Consistency | No warping or misalignments at edges |
+| ✔️ Report    | Include GCP residuals in QA/QC documentation |
+
+---
+
+### 🛠️ Pro Tips
+
+- Always use **cross-checking** with checkpoints not included in model adjustment.
+- Back up your **GCP CSV**, images, and Terra project folder before and after processing.
+- Export a **GCP Residual Report** from DJI Terra for inclusion in QA packages.
+- Use **consistent naming** across field sheets, CSV files, and tagging labels to avoid errors.
+- For repeat surveys (e.g., stockpile volumes), use the **same GCPs** across time periods to improve comparison accuracy.
+
+---
+
+By following this GCP alignment workflow, you ensure deliverables are survey-grade and suitable for engineering, design, and compliance applications.
 
 ---
 
 ## 🌐 7. ArcGIS Pro – LAS to Raster Workflow
 
-### 🎯 Goal:
-Convert classified `.las` data into DEM or DSM.
+Converting raw point cloud data into usable elevation models is a foundational step in drone data processing. This workflow transforms `.las` or `.zlas` files into high-resolution **Digital Elevation Models (DEMs)** or **Digital Surface Models (DSMs)** for analysis, visualization, and volume calculations.
 
-### Step-by-Step:
-1. 📥 Import LAS Dataset
-2. ⚙️ Set Filter (Class = Ground or First Return)
-3. 📤 Export to Raster
-   - Value Field: Elevation
-   - Interpolation: Binning (Average/Minimum)
-   - Cell Size: 1m or 2m
-   - Save to FGDB on `Z:` drive
+---
 
-✅ Your DEM/DSM is now ready.
+### 🎯 Goal
+
+Produce either a **bare-earth surface (DEM)** or a **first-surface model (DSM)** from classified LAS point cloud data.
+
+---
+
+### 🪜 Step-by-Step Workflow
+
+#### 1. 📥 Import LAS Dataset
+- Use the **“LAS Dataset To Raster”** tool or create a **LAS Dataset Layer** in your map.
+- Input `.las` or `.zlas` files from your project directory.
+- Optional: Set projection if not already defined.
+
+#### 2. ⚙️ Set Filter by Classification
+Choose appropriate classification filter depending on output type:
+
+| Model Type | Class Filter            | Description |
+|------------|-------------------------|-------------|
+| **DEM**    | Ground (Class = 2)       | Removes vegetation/buildings to reveal bare earth. |
+| **DSM**    | First Return (Class = 1) | Includes trees, buildings, and surface objects.    |
+
+- Open **Layer Properties > Symbology > Filter** or use the **“LAS Dataset To Raster”** tool parameters.
+
+#### 3. 🧰 Export to Raster
+Use the **LAS Dataset To Raster** tool from the 3D Analyst toolbox:
+
+- **Value Field**: `Elevation`
+- **Method**: `Binning`
+- **Statistic Type**: `Average` (for smoother DEM), or `Minimum` (to reduce vegetation noise)
+- **Void Fill Method**: Optional, e.g., Linear or Natural Neighbor
+- **Interpolation**: Use `none` or `binning`—avoid kriging for large datasets unless necessary.
+
+#### 4. 📏 Set Cell Size
+- Choose **1m** or **2m** resolution depending on survey accuracy and project scope.
+- Higher resolution (e.g., 0.5m) possible for small sites or where GNSS quality is high.
+
+#### 5. 💾 Save Output Raster
+- Output format: **File Geodatabase (FGDB) raster**
+- Location: `Z:\Drone\YYYY-MM-DD\ProjectName\DEM.gdb`
+- Filename: Use standard naming such as `DEM`, `DSM`, `Hillshade`, etc.
+
+---
+
+### 🖼️ Workflow Diagram
+
+![LAS to Raster Workflow](./LAS_to_Raster_Workflow.png)
+
+> 🔗 *Diagram: LAS dataset → Filter by class → Raster interpolation → FGDB output*
+
+---
+
+### ✅ Result
+
+You now have a clean **DEM** or **DSM** raster ready for:
+- Contour generation
+- Volume calculations
+- Cut/Fill analysis
+- Terrain visualization
+- Integration with Civil 3D or QGIS
+
+---
+
+### 🧠 Pro Tips
+
+- Run **“LAS Point Statistics As Raster”** for QC before final export.
+- For hillshades, use **“Hillshade”** tool after raster export for enhanced terrain visuals.
+- Use **“Set Null”** or **“Raster Calculator”** to remove artifacts or vegetation islands if needed.
+- Always back up `.las` and output `.tif` or `.img` files to long-term storage or cloud.
 
 ---
 
