@@ -40,33 +40,79 @@ This guide provides a comprehensive workflow for drone pilots conducting aerial 
 - DJI Pilot 2 updated
 
 **Environmental:**
-- Weather and airspace checked (Have logged in AirShare, have contacted any necessary authorities preflight).
-- Launch site scouted and clear
-- Sun angle suitable for mapping
+
+- ✅ **Weather and airspace checked**  
+  Confirm forecast is suitable for flying (wind, rain, visibility) and check NOTAMs or airspace restrictions using AirShare or other relevant tools.
+
+- ✅ **Launch site scouted and clear**  
+  Ensure the takeoff and landing zone is flat, safe, and free from people, animals, overhead obstacles, and signal interference.
+
+- ✅ **Sun angle suitable for mapping**  
+  Plan to fly when the **sun is highest in the sky (around 11 AM to 2 PM)**. This reduces shadows from trees and structures, improving image quality for photogrammetry.
+
+- ✅ **Water or tide conditions considered (if applicable)**  
+  If near **rivers**, check for recent rain or elevated flows. In **coastal or estuarine areas**, consult **tide charts**:
+  - Use **low tide** to expose more shoreline and intertidal zones.
+  - Use **high tide** to capture flooded extents or marine infrastructure under typical conditions.
+
+
+---
+## 📌 2. On-Site Setup Options
+
+Choosing the correct setup method for your drone mission is critical to achieving the positional accuracy required for your project. Below are four common options, each with its benefits, limitations, and typical use cases.
 
 ---
 
-## 📌 2. On-Site Setup Options
-
 ### ▶️ 2.1 Relative Survey
-- No GCPs or benchmarks
-- Fast deployment
-- Reduced accuracy
+
+- **No Ground Control Points (GCPs)** or known benchmarks are used.
+- Ideal for **quick site visits**, **progress photos**, or **visual inspections** where high spatial accuracy isn't a priority.
+- **Fastest setup time** — launch and fly without additional equipment.
+- **Accuracy is limited** to the onboard GPS of the drone, typically within 1–3 meters horizontally.
+- **Not suitable** for survey-grade mapping or engineering deliverables.
+
+> ⚠️ Use with caution: Best for non-critical mapping where spatial precision is not needed.
+
+---
 
 ### ▶️ 2.2 Ground Markers with Rover GPS
-- Paint visible markers ("X")
-- Record GCPs with RTK rover
-- Ensure visibility in multiple images
+
+- **Visible ground markers** (spray-painted “X”s, checkerboards, or vinyl targets) are placed before the flight.
+- Each marker is **surveyed with a high-precision RTK or PPK rover** to capture their real-world coordinates.
+- Markers should be **clearly visible in 3+ photos** from different angles to ensure accurate tie-in during processing.
+- Significantly improves **absolute accuracy** of the final outputs when processed with GCPs.
+- Ideal for **engineering surveys**, **volume calculations**, and **compliance-grade outputs**.
+
+> ✅ Recommended when accuracy is critical but an RTK-enabled drone setup isn’t available or reliable.
+
+---
 
 ### ▶️ 2.3 D-RTK 2 Base Station
-- Set up on tripod over known/unknown point
-- Pair with aircraft via DJI Pilot 2
-- Wait for initialization and lock
+
+- A **DJI-branded GNSS base station** that communicates directly with RTK-enabled DJI drones.
+- Set up the base station on a **tripod**:
+  - Over a **known point** (preferred) for georeferenced outputs.
+  - Or on an **arbitrary point** if relative accuracy is sufficient.
+- **Pair the base station to the drone via DJI Pilot 2**.
+- Wait for **GNSS lock and RTK initialization** before flying.
+- Provides **real-time corrections** to the aircraft, achieving **2–5 cm horizontal accuracy**.
+
+> 🎯 Best used in **open-sky rural areas** with poor mobile signal or when you want full control of the correction source.
+
+---
 
 ### ▶️ 2.4 NTRIP RTK
-- Connect RC to mobile internet
-- Configure mountpoint, username, password
-- Confirm RTK lock
+
+- Uses **mobile internet (SIM card or hotspot)** to connect the drone’s remote controller to an **online GNSS correction service**.
+- Requires entry of:
+  - **Caster IP/URL**
+  - **Mountpoint name**
+  - **Username and password**
+- The aircraft receives corrections over the air and shows an **RTK FIX** once locked.
+- Requires **good cellular signal** on-site to maintain correction stream.
+- Great for **urban or coastal areas** where correction networks (e.g., NZ LINZ PositioNZ, Auscors) are available.
+
+> 🌐 Most convenient for **high-accuracy work** without needing extra hardware, assuming reliable mobile coverage.
 
 ---
 
@@ -99,6 +145,14 @@ This guide provides a comprehensive workflow for drone pilots conducting aerial 
 | ISO            | 100–400         |
 | Color Profile  | D-Cinelike      |
 | Bitrate        | High / Max      |
+
+### 🛑 Airspace Compliance Checklist (Must Do Before Flight)
+
+- ✅ **Log your flight in [AirShare](https://www.airshare.co.nz)**.
+- ✅ **Check for restricted airspace or NOTAMs** in your planned area.
+- ✅ **Contact local ATC or aerodrome manager** if operating near controlled zones or within 4 km of an airport.
+- ✅ **Obtain any necessary permits** (e.g., flying over DOC land, near schools, or public events).
+- ✅ **Review Civil Aviation Rules Part 101** if operating under standard certification.
 
 ---
 
