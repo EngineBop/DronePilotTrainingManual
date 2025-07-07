@@ -150,7 +150,7 @@ Choosing the correct setup method for your drone mission is critical to achievin
 
 - ✅ **Log your flight in [AirShare](https://www.airshare.co.nz)**.
 - ✅ **Check for restricted airspace or NOTAMs** in your planned area.
-        - ✅ **Contact local Bay of Plenty TAs** for guidance/permits when operating in parks, reserves, or within 4 km of aerodromes:
+- ✅ **Contact local Bay of Plenty TAs** for guidance/permits when operating in parks, reserves, or within 4 km of aerodromes:
   - **Tauranga City Council** – [flying‑drones‑or‑uavs](https://www.tauranga.govt.nz/exploring/parks-and-reserves/using-our-parks/flying-drones-or-uavs)
   - **Western Bay of Plenty District Council** – [drones](https://www.westernbay.govt.nz/recreation/drones)
   - **Rotorua Lakes Council** – [drones in Rotorua](https://www.rotorualakescouncil.nz/parks-lakes-recreation/drones-in-rotorua) (including [PDF flyer](https://www.rotorualakescouncil.nz/repository/.../Drone_Flyer_Draft_V6_FA.pdf))
