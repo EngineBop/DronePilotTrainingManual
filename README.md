@@ -150,6 +150,12 @@ Choosing the correct setup method for your drone mission is critical to achievin
 
 - ✅ **Log your flight in [AirShare](https://www.airshare.co.nz)**.
 - ✅ **Check for restricted airspace or NOTAMs** in your planned area.
+        - ✅ **Contact local Bay of Plenty TAs** for guidance/permits when operating in parks, reserves, or within 4 km of aerodromes:
+  - **Tauranga City Council** – [flying‑drones‑or‑uavs](https://www.tauranga.govt.nz/exploring/parks-and-reserves/using-our-parks/flying-drones-or-uavs)
+  - **Western Bay of Plenty District Council** – [drones](https://www.westernbay.govt.nz/recreation/drones)
+  - **Rotorua Lakes Council** – [drones in Rotorua](https://www.rotorualakescouncil.nz/parks-lakes-recreation/drones-in-rotorua) (including [PDF flyer](https://www.rotorualakescouncil.nz/repository/.../Drone_Flyer_Draft_V6_FA.pdf))
+  - **Whakatāne District Council** – [flying‑drones‑district](https://www.whakatane.govt.nz/residents/flying-drones-district)
+  - **Ōpōtiki District Council** – [Opotīki aerodrome drone page](https://www.odc.govt.nz/our-district/parks-and-reserves/opotiki-aerodrome); apply via their [UAV consent form](https://online.odc.govt.nz/online-services/new/uavconsent/step/1)
 - ✅ **Contact local ATC or aerodrome manager** if operating near controlled zones or within 4 km of an airport.
 - ✅ **Obtain any necessary permits** (e.g., flying over DOC land, near schools, or public events).
 - ✅ **Review Civil Aviation Rules Part 101** if operating under standard certification.
