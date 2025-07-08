@@ -428,17 +428,72 @@ You now have a clean **DEM** or **DSM** raster ready for:
 
 ## 🧭 8. ArcGIS Pro – Generate Contours
 
-### 🎯 Goal:
-Create clean vector contour lines from raster DEM.
+Contour lines are vital for understanding terrain. They provide a clear and interpretable way to visualize elevation, slope, and form—especially useful in flood modelling, construction planning, earthworks, and asset management.
 
-### Step-by-Step:
-1. 🗺️ Add DEM to Map
-2. 🧰 Run Contour Tool
-3. Set:
-   - Interval: 0.5m or 1m
-   - Base Contour: 0
-   - Output: FGDB or shapefile
-4. 🎨 Symbolize and label as needed
+---
+
+### 🎯 Goal
+
+Convert a raster Digital Elevation Model (DEM) into clean, vector-based **contour lines** that:
+- Represent changes in elevation at regular intervals
+- Can be used in GIS, CAD, or field map applications
+- Help identify terrain features like ridgelines, depressions, and gradients
+
+---
+
+### 🪜 Step-by-Step Workflow
+
+#### 1. 🗺️ Add DEM to Map
+- Start ArcGIS Pro and add your processed **DEM raster** to a new or existing map project.
+- Make sure the raster is correctly georeferenced and displays continuous elevation values (not classified).
+
+> 💡 *Why?* This step ensures you're working with accurate elevation data. DEMs are required to generate contours because they store elevation in a continuous surface format, unlike point clouds.
+
+---
+
+#### 2. 🧰 Run Contour Tool
+- Open the **“Contour”** tool from:
+  - `Toolboxes > Spatial Analyst Tools > Surface > Contour`
+- Alternatively, search "Contour" in the **Geoprocessing pane**.
+
+> 🧠 *Why?* This tool analyzes changes in cell values (elevation) and draws polylines where terrain crosses defined elevation levels.
+
+---
+
+#### 3. ⚙️ Set Contour Parameters
+
+| Parameter        | Recommendation        | Purpose |
+|------------------|------------------------|---------|
+| **Input Raster** | Your processed DEM      | Source of elevation data |
+| **Contour Interval** | `0.5m` or `1m`       | Smaller values give more detail; use `0.5m` for urban or engineered sites, `1m`+ for rural |
+| **Base Contour** | `0`                     | Elevation to start contouring from (usually sea level or project datum) |
+| **Output**       | `.gdb` feature class or `.shp` shapefile | Save in your project’s `Z:\Drone\YYYY-MM-DD\ProjectName\GIS.gdb` |
+
+> 🎯 *Why interval matters*: Smaller intervals provide more detail but can result in clutter. Balance readability and purpose (e.g., volumetrics vs. presentation).
+
+---
+
+#### 4. 🎨 Symbolize and Label (Optional but Recommended)
+
+- In the **Contents pane**, right-click the contour layer and choose **Symbology**:
+  - Set line color, weight, and style (e.g., dashed for intermediate, bold for index lines).
+- Use **Labeling tab** to enable labels:
+  - Field = `Contour` (this stores the elevation value)
+  - Position = above or centered
+  - Font = simple and readable (e.g., Arial 9pt)
+
+> 🧠 *Why?* Good labeling makes contours understandable at a glance. They become useful for surveyors, engineers, and stakeholders without needing to open the attribute table.
+
+---
+
+### 📈 Example: 1m Contours for Earthworks
+
+```plaintext
+Contours_1m/
+├── Linear vector polylines representing 1m elevation changes
+├── Derived from DEM with 1m cell size
+├── Stored in GIS.gdb for compatibility with Civil 3D
+
 
 ---
 
@@ -462,7 +517,54 @@ Calculate volume difference between two surfaces or baseline.
 
 ---
 
-## 🔢 10. QA/QC Checklist
+## 🗂️ 10. Pre vs Post DEM Comparison
+
+When monitoring site changes over time—such as construction progress, erosion, or material movement—you can compare two Digital Elevation Models (DEMs) to identify and quantify volumetric differences.
+
+This is ideal for:
+- Measuring excavation or fill on construction sites
+- Detecting unauthorised earthworks
+- Tracking stockpile growth or depletion
+- Environmental restoration or degradation studies
+
+---
+
+### 🎯 Goal
+
+Quantify the volumetric difference between two time-separated DEMs:
+- **Pre-event DEM**: Captured before earthworks or environmental change
+- **Post-event DEM**: Captured after the activity
+
+The result is a **cut/fill volume map** and table showing where ground levels have increased or decreased.
+
+---
+
+### 🪜 Step-by-Step Workflow
+
+#### 1. 📥 Load Both DEMs
+
+- Add both the **pre-construction DEM** and **post-construction DEM** into your ArcGIS Pro project.
+- Make sure they:
+  - Cover the same extent
+  - Share the same coordinate system
+  - Use the same cell resolution (e.g., 1 m)
+
+> 💡 *Tip*: Use “Project Raster” and “Resample” tools if needed to align them spatially and resolution-wise.
+
+---
+
+#### 2. ➖ Subtract Surfaces (Raster Calculator)
+
+Open the **Raster Calculator** and subtract the two DEMs:
+
+```plaintext
+Difference = "Post_DEM" - "Pre_DEM"
+
+
+
+---
+
+## 🔢 11. QA/QC Checklist
 - GCP RMS within targets
 - DEM visual check (hillshade)
 - LAS class stats valid
@@ -470,7 +572,7 @@ Calculate volume difference between two surfaces or baseline.
 
 ---
 
-## 🏗️ 11. Integration with Autodesk Civil 3D
+## 🏗️ 12. Integration with Autodesk Civil 3D
 
 ### 🔄 Export from ArcGIS Pro
 - DEM: GeoTIFF or ASCII Grid
