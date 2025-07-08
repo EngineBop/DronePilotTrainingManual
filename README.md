@@ -1,5 +1,5 @@
 
-# 🚁 Drone Pilot Training Manual
+# 🚁Standard Operating Procedures for Drone Use
 
 ## 📑 Table of Contents
 
