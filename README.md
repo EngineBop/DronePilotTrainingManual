@@ -551,16 +551,60 @@ The result is a **cut/fill volume map** and table showing where ground levels ha
 
 > 💡 *Tip*: Use “Project Raster” and “Resample” tools if needed to align them spatially and resolution-wise.
 
----
-
 #### 2. ➖ Subtract Surfaces (Raster Calculator)
 
 Open the **Raster Calculator** and subtract the two DEMs:
 
-```plaintext
+```
 Difference = "Post_DEM" - "Pre_DEM"
+```
 
+- Positive values = **Fill** (ground has been raised)
+- Negative values = **Cut** (ground has been lowered)
 
+> 🧠 *Why this works*: You’re comparing changes in elevation cell-by-cell across the surface area.
+
+#### 3. 🎨 Visualize Differences
+
+- Symbolize the `Difference` raster using a diverging color ramp (e.g., red = cut, blue = fill).
+- Use **Classify** or **Stretch** symbology to clearly show meaningful elevation changes.
+
+#### 4. 📊 Calculate Volume (Zonal Statistics)
+
+Use **Zonal Statistics as Table** to get total net volume change:
+
+- **Zone Layer**: Your project AOI (e.g., polygon around construction site)
+- **Input Value Raster**: `Difference`
+- **Statistic**: `SUM`
+
+Assuming your raster units are meters and cells are 1 m²:
+- **SUM** value = total cut/fill in **cubic metres (m³)**
+
+---
+
+---
+
+### 📦 Output Example
+
+```
+Zone_ID    | Sum_Value (m³) | Interpretation
+-----------|----------------|-------------------------------
+SiteA      |     -1,450.67  | 1,450.67 m³ of CUT occurred
+SiteB      |        960.22  | 960.22 m³ of FILL added
+```
+
+---
+
+### ✅ Tips & Considerations
+
+- **Flattened stockpile pads or platforms** may need to be masked out to avoid skewing results.
+- Remove noise or small fluctuations using **“Set Null”** for values < ±0.05 m if appropriate.
+- Save all outputs (Difference raster, stats table, clipped rasters) in:  
+  `Z:\Drone\YYYY-MM-DD\ProjectName\ChangeAnalysis.gdb`
+
+---
+
+This technique is powerful for auditing site progress, documenting compliance, and quantifying change over time using your drone survey data.
 
 ---
 
