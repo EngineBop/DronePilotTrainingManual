@@ -234,7 +234,8 @@ In any mission-critical operation, being prepared for unexpected events is essen
 
 ### 🗂️ Folder Structure Example
 
-```
+
+
 ProjectName/
 ├── 01_Flight_Logs/
 ├── 02_Images/
@@ -488,7 +489,7 @@ Convert a raster Digital Elevation Model (DEM) into clean, vector-based **contou
 
 ### 📈 Example: 1m Contours for Earthworks
 
-```plaintext
+
 Contours_1m/
 ├── Linear vector polylines representing 1m elevation changes
 ├── Derived from DEM with 1m cell size
@@ -557,7 +558,7 @@ The result is a **cut/fill volume map** and table showing where ground levels ha
 
 Open the **Raster Calculator** and subtract the two DEMs:
 
-```plaintext
+
 Difference = "Post_DEM" - "Pre_DEM"
 
 
