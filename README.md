@@ -59,6 +59,7 @@ This guide provides a comprehensive workflow for drone pilots conducting aerial 
 
 
 ---
+
 ## 📌 2. On-Site Setup Options
 
 Choosing the correct setup method for your drone mission is critical to achieving the positional accuracy required for your project. Below are four common options, each with its benefits, limitations, and typical use cases.
@@ -231,20 +232,93 @@ In any mission-critical operation, being prepared for unexpected events is essen
 
 ## 📂 5. Post-Flight Data Management
 
-### 💾 SD Card Handling
-- Copy all contents to `Z:\ProjectName`
+### 💾 SD Card Handling and Data Transfer
 
-### 🗂️ Folder Structure Example
+Your workflow may vary depending on your **processing tools** and **hardware setup**. Here’s a typical approach for both local and cloud-based workflows.
 
+---
 
+### 🖥️ Local Processing Workflow (e.g., DJI Terra)
+
+If you are using a **dedicated workstation (desktop or server)** for heavy data processing:
+
+1. **Copy data from SD card to local project folder**, for example: F:_Drone at BOPRC\Tarawera
+
+2. Process imagery or LiDAR datasets in **DJI Terra** or another desktop application.
+
+---
+
+### 🌐 Cloud Processing Workflow (e.g., DroneDeploy)
+
+If using cloud tools like **DroneDeploy**:
+
+1. Upload images **directly from SD card** to your DroneDeploy project.
+2. Let DroneDeploy handle cloud processing and export final outputs.
+
+---
+
+### 📦 Post-Processing Storage
+
+Once processing is complete:
+
+- Copy all project outputs to the network drive, e.g.: Z:\ProjectName
+
+#### 🗂️ Recommended Folder Structure
 
 ProjectName/
 ├── 01_Flight_Logs/
 ├── 02_Images/
-│   └── JPG/
+│ └── JPG/
 ├── 03_Raw_RTK/
 ├── 04_Checkpoints/
 └── 05_Exports/
+
+---
+
+### 🛠️ Copying Raster Outputs to File Geodatabase
+
+To prepare raster outputs (like `.tif` orthomosaics or DEMs) for **ArcGIS Pro**, follow these steps:
+
+1. **Open ArcGIS Pro**
+2. Use the tool: Data Management Tools > Raster > Copy Raster
+
+
+3. Parameters:
+- **Input Raster**: Your `.tif` or `.img` file
+- **Output Location**: `Z:\Aerials_Dems.gdb`
+- **Output Name**: Choose a short, clear name (avoid spaces)
+
+4. Set **Output Format** (if needed):
+- Esri Grid Raster (`GRID`)
+- File Geodatabase Raster (`FGDBR`)
+
+---
+
+### ⚙️ Useful Tools in ArcGIS Pro
+
+| Tool                         | Purpose                                   |
+|-----------------------------|-----------------------------------------|
+| Copy Raster                 | Copies raster datasets into geodatabases or converts formats |
+| Raster To Geodatabase       | Batch import multiple rasters into a FGDB |
+| Mosaic To New Raster        | Combine multiple rasters into one |
+| Build Pyramids / Statistics | Optimize rasters for display performance |
+
+---
+
+### ✅ Ready for GIS and Web Publishing
+
+Once rasters are stored inside the File Geodatabase:
+- Use them directly in **ArcGIS Pro** for further analysis.
+- Share as:
+- Web Feature Layer (if vectorized contours or points)
+- Web Tile Layer or Imagery Layer (if raster)
+- Tile Package for offline use
+
+Publish to **ArcGIS Online** or your organization’s Enterprise Portal as needed.
+
+---
+
+> 💡 **Tip:** Always check naming conventions; Esri FGDBs have a 63-character limit and don’t support special characters or spaces.
 
 ---
 
