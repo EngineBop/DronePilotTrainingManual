@@ -12,10 +12,10 @@ This is the practical training manual and field reference for BOPRC's engineerin
 
 | Resource | Open it |
 |---|---|
-| **Complete online manual** | [Open the BOPRC Engineering Drone Manual](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/) |
-| **Animated overview** | [Watch “Why and how we use drones”](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/purpose-animation-final.html) |
-| **Practice theory test** | [Take the no-login online test](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/theory-test.html) |
-| **Printable manual** | [Download the PDF](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf) |
+| **Complete online manual** | [Open the BOPRC Engineering Drone Manual](https://enginebop.github.io/DronePilotTrainingManual/) |
+| **Animated overview** | [Watch “Why and how we use drones”](https://enginebop.github.io/DronePilotTrainingManual/purpose-animation-final.html) |
+| **Practice theory test** | [Take the no-login online test](https://enginebop.github.io/DronePilotTrainingManual/theory-test.html) |
+| **Printable manual** | [Download the PDF](https://enginebop.github.io/DronePilotTrainingManual/downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf) |
 
 The complete website is stored in [`docs/`](docs/). It includes every manual section, the approved animation, the theory test, images and downloadable resources. The long-form Markdown manual continues below in this README so it can also be read directly on GitHub.
 
@@ -56,7 +56,7 @@ The complete website is stored in [`docs/`](docs/). It includes every manual sec
 
 The Engineering, Rivers & Drainage team uses drones to capture accurate, timely and repeatable information to support engineering decisions, construction monitoring, asset management and flood response.
 
-> **Visual overview:** [Watch the approved three-minute animation explaining the complete stopbank survey lifecycle](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/purpose-animation-final.html).
+> **Visual overview:** [Watch the approved three-minute animation explaining the complete stopbank survey lifecycle](https://enginebop.github.io/DronePilotTrainingManual/purpose-animation-final.html).
 
 Typical work includes:
 
@@ -72,7 +72,7 @@ Our two principal survey systems are:
 
 | DJI Matrice 4E | DJI Matrice 350 RTK + Zenmuse L2 |
 |---|---|
-| <img src="https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/dji-matrice-4-series-official.jpg" alt="DJI Matrice 4E in flight" width="480"> | <img src="https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/dji-matrice-350-rtk-official.jpg" alt="DJI Matrice 350 RTK in flight" width="480"> |
+| <img src="https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/dji-matrice-4-series-official.jpg" alt="DJI Matrice 4E in flight" width="480"> | <img src="https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/dji-matrice-350-rtk-official.jpg" alt="DJI Matrice 350 RTK in flight" width="480"> |
 | Routine mapping, progress photography, inspection, video and Photospheres using network RTK/NTRIP. | Specialist LiDAR work, including terrain beneath vegetation and larger or more complex survey sites. |
 
 *Figure 1. BOPRC's principal engineering survey aircraft. Images: DJI official product pages.*
@@ -94,7 +94,7 @@ The pilot's safety decision is final. Anyone may call **stop** when they see an 
 
 Use the same six stages for every job. The amount of planning will vary, but no stage is optional.
 
-![Six stages before launch](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/fig-02-flight-approval-gates.svg)
+![Six stages before launch](https://enginebop.github.io/DronePilotTrainingManual/assets/fig-02-flight-approval-gates.svg)
 
 *Figure 2. Define the job, confirm the pilot and aircraft, check airspace and access, control the risks, then make the field go/no-go decision.*
 
@@ -124,7 +124,7 @@ Before launch, confirm:
 
 Within 4 km of an aerodrome, extra requirements normally apply. Check private strips, heliports, hospital helipads and water aerodromes as well as public airports.
 
-![Airspace and permissions decision path](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/fig-03-airspace-decision.svg)
+![Airspace and permissions decision path](https://enginebop.github.io/DronePilotTrainingManual/assets/fig-03-airspace-decision.svg)
 
 *Figure 3. Use current information for the actual place, date and time. DJI warnings or unlocks are not the legal source for New Zealand airspace.*
 
@@ -263,11 +263,11 @@ Every incident is different. Make the situation safe first, then confirm the cor
 | Check focus, exposure, triggering and a short verification area. | Confirm height, speed, line spacing, scan mode, terrain and edge coverage for the job. |
 | If corrections become unstable, keep the flight safe and pause survey capture until data quality is understood. | Before leaving site, verify the required LiDAR and trajectory files are present. |
 
-![Matrice 4E network RTK workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/fig-04-matrice-4e-ntrip.svg)
+![Matrice 4E network RTK workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/fig-04-matrice-4e-ntrip.svg)
 
 *Figure 4. Matrice 4E mapping workflow using an approved NTRIP correction source.*
 
-![M350 RTK and Zenmuse L2 capture workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/fig-05-m350-l2.svg)
+![M350 RTK and Zenmuse L2 capture workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/fig-05-m350-l2.svg)
 
 *Figure 5. M350 RTK and L2 capture chain. Check the finished work against independent survey control.*
 
@@ -277,7 +277,7 @@ Every incident is different. Make the situation safe first, then confirm the cor
 
 Ferntech's service process includes cleaning and inspection, battery checks, firmware and calibration checks, test flight and maintenance evidence.
 
-![Ferntech service and return-to-use workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/fig-07-service-workflow.svg)
+![Ferntech service and return-to-use workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/fig-07-service-workflow.svg)
 
 *Figure 6. Booking, assessment, repair and safe return to service.*
 
@@ -308,23 +308,23 @@ For a suitable linear site, start with **six permanent ground control points (GC
 
 Keep every point inside the confirmed project/contract access area, but outside current and future earthworks, haul routes, plant tracking, laydown, road or stopbank-crest traffic and other likely disturbance. Final locations require field and survey verification.
 
-![Six-point control layout inside the authorised project corridor](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/review-v2/gcp-layout-authorised-corridor.svg)
+![Six-point control layout inside the authorised project corridor](https://enginebop.github.io/DronePilotTrainingManual/assets/review-v2/gcp-layout-authorised-corridor.svg)
 
 *Figure 7. Put control outside the work — not outside the project. Do not place targets in neighbouring paddocks without specific permission and secure project access.*
 
 The photo below shows only the pair that might be visible near one end of a work area. The targets are small, close to the work and clear of disturbed ground.
 
-![Conceptual pair of permanent GCPs beside stopbank works](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/review-v2/gcp-pair-stopbank-works-concept-v2.png)
+![Conceptual pair of permanent GCPs beside stopbank works](https://enginebop.github.io/DronePilotTrainingManual/assets/review-v2/gcp-pair-stopbank-works-concept-v2.png)
 
 *Figure 8. Conceptual overlay only — not a record of installed BOPRC control. Verify scale, access, services and future works on site.*
 
 The proposed in-house target is a **290 × 290 mm ASA plate** with black-and-white quadrants, an exact surveyable centre and four low-profile corner fixings. ASA is preferred for the prototype because it is more suitable than PLA for outdoor UV and weather exposure. The council's Bambu Lab H2D has a published dual-nozzle work area of 300 × 320 mm, so the proposed plate fits with a small margin. Confirm the sliced toolpath, final thickness, colour contrast, print settings and outdoor durability through a field prototype.
 
-![BOPRC survey-control plate concept](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/review-v2/boprc-gcp-plate-installation-concept-v1.png)
+![BOPRC survey-control plate concept](https://enginebop.github.io/DronePilotTrainingManual/assets/review-v2/boprc-gcp-plate-installation-concept-v1.png)
 
 *Figure 9. Proposed face: BOPRC SURVEY CONTROL, unique point number, PLEASE DO NOT REMOVE and 0800 884 880.*
 
-![Dimensioned plate and nearly flush installation](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/review-v2/boprc-gcp-plate-dimensioned.svg)
+![Dimensioned plate and nearly flush installation](https://enginebop.github.io/DronePilotTrainingManual/assets/review-v2/boprc-gcp-plate-dimensioned.svg)
 
 *Figure 10. Plate installed almost flush on a level compacted fine-gravel pad with a small vegetation-free collar.*
 
@@ -347,7 +347,7 @@ The construction-survey sequence is: confirm the design, access and occupied wor
 
 Choose the simplest positioning method that can meet the job's accuracy and repeatability needs.
 
-![Four positioning options](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b1-positioning-options.svg)
+![Four positioning options](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b1-positioning-options.svg)
 
 *Figure 11. RTK improves the aircraft position; independent surveyed checkpoints still test the finished result.*
 
@@ -406,7 +406,7 @@ NTRIP may reduce the need to use GCPs to adjust a validated lower-risk model, bu
 
 Use temporary checkpoints when the final positional or surface accuracy must be tested independently. A suitable checkpoint might be a small high-contrast spray mark on a completed, still-bare stopbank surface, provided marking is approved.
 
-![Conceptual RTK rover measurement of a temporary stopbank checkpoint](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b1-temporary-checkpoint-concept.png)
+![Conceptual RTK rover measurement of a temporary stopbank checkpoint](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b1-temporary-checkpoint-concept.png)
 
 *Figure 12. Conceptual example — not a real BOPRC installation. Place the mark on stable, reasonably flat ground, clear of the crest edge, breaks in slope, loose material, active plant routes and any area likely to be reworked.*
 
@@ -430,7 +430,7 @@ One checkpoint is a useful local check, but it cannot describe accuracy across a
 
 ## 6.1 Matrice 4E area route in DJI Pilot 2
 
-![Matrice 4E area route workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b2-m4e-area-route.svg)
+![Matrice 4E area route workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b2-m4e-area-route.svg)
 
 *Figure 13. Create the area route, select the aircraft and wide mapping camera, draw the authorised work area, then set and verify the route.*
 
@@ -438,7 +438,7 @@ One checkpoint is a useful local check, but it cannot describe accuracy across a
 
 The route must cover more than the immediate earthworks. Include the construction footprint, site establishment, vehicle and plant operating areas, laydown/overnight parking, the full land-access or compensation area, every permanent control point and a useful margin beyond them. Keep the route inside authorised land and airspace.
 
-![Repeat construction mission coverage](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b2-repeat-route-coverage.svg)
+![Repeat construction mission coverage](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b2-repeat-route-coverage.svg)
 
 *Figure 14. Conceptual coverage plan. Required features and control belong inside the reliable captured area, not at the edge where turns and reconstruction artefacts are more likely.*
 
@@ -513,7 +513,7 @@ Use slow, deliberate gimbal movement and short labelled clips. Record what the c
 
 DJI lists Panorama as a supported Matrice 4E still-photo mode, using 20 MP source images and producing an approximately 100 MP stitched panorama. Use Photospheres to show flood conditions in context — not as survey measurement.
 
-![Matrice 4E Photosphere workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b3-photosphere-flood.svg)
+![Matrice 4E Photosphere workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b3-photosphere-flood.svg)
 
 *Figure 15. Use a repeatable safe hover point, fixed exposure and a complete event record.*
 
@@ -600,7 +600,7 @@ Arrival and departure notification are both a health-and-safety control and prof
 
 Use the memory card as the transfer source — not as the only copy and not as the working drive.
 
-![From aircraft to protected project data](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b1-field-to-project.svg)
+![From aircraft to protected project data](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b1-field-to-project.svg)
 
 *Figure 16. Check the data, create a primary project copy and a backup, then process a separate working copy.*
 
@@ -648,7 +648,7 @@ If the coordinate or height setup cannot be understood and independently checked
 
 After the source copy is verified, route each product to the appropriate workflow.
 
-![Drone output routing](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-c1-output-routing.svg)
+![Drone output routing](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-c1-output-routing.svg)
 
 *Figure 17. Survey data, Photospheres and record media follow different processing paths but remain connected by one Survey/Event ID.*
 
@@ -670,7 +670,7 @@ Flood photographs, oblique views, video and Photospheres are intended to feed th
 
 A **GCP** influences the aerial-triangulation adjustment. An **independent checkpoint** is withheld from that adjustment and tests the finished result.
 
-![Ground control points and independent checkpoints](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b2-control-vs-checkpoint.svg)
+![Ground control points and independent checkpoints](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b2-control-vs-checkpoint.svg)
 
 *Figure 18. GCPs help align the model. Checkpoints provide the independent accuracy test.*
 
@@ -680,7 +680,7 @@ Permanent plates may be reused as GCPs in each repeat project, but inspect them 
 
 ## 8.2 Create the Terra project
 
-![Simplified DJI Terra project workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-c2-terra-project-steps.svg)
+![Simplified DJI Terra project workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-c2-terra-project-steps.svg)
 
 *Figure 19. Simplified interface guide based on current DJI guidance. Use the help matching the installed Terra release.*
 
@@ -701,7 +701,7 @@ DJI's current guidance uses this point order:
 Point name, X/Easting, Y/Northing, Z/Height, horizontal accuracy, vertical accuracy
 ```
 
-![DJI Terra control and checkpoint workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-b3-terra-gcp-workflow.svg)
+![DJI Terra control and checkpoint workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-b3-terra-gcp-workflow.svg)
 
 *Figure 20. Use the same control-to-acceptance sequence for every photogrammetry project.*
 
@@ -770,11 +770,11 @@ For LiDAR, review the flight parameters, trajectory/IMU quality, point-cloud war
 
 ## 9.1 LAS or point cloud to DEM/DSM
 
-![Elevation processing workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-d1-elevation-workflow.svg)
+![Elevation processing workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-d1-elevation-workflow.svg)
 
 *Figure 21. Keep the source point cloud, create the surface needed for the job, then check it before deriving contours or volumes.*
 
-![Conceptual LAS, DSM and bare-earth DEM comparison](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-d3-elevation-products.svg)
+![Conceptual LAS, DSM and bare-earth DEM comparison](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-d3-elevation-products.svg)
 
 *Figure 22. Conceptual products from one site: the point cloud is the measured 3D sample, the DSM represents the upper visible surface, and the bare-earth DEM represents classified ground.*
 
@@ -801,7 +801,7 @@ For context, the national LINZ 1 m DEM is specified at approximately **±0.20 m 
 
 Use contours for interpretation and drawing support after the DEM has passed its surface checks.
 
-![Conceptual checked DEM to contours](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-d4-contours.svg)
+![Conceptual checked DEM to contours](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-d4-contours.svg)
 
 *Figure 23. Generate contours from the checked bare-earth surface, then inspect the lines before presentation or CAD handover.*
 
@@ -818,7 +818,7 @@ Inspect contours for noisy vegetation remnants, water-edge artefacts, pits, spik
 
 # 10. Surface comparison and volumes
 
-![Conceptual pre/post surface comparison and Cut Fill result](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-e1-surface-comparison.svg)
+![Conceptual pre/post surface comparison and Cut Fill result](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-e1-surface-comparison.svg)
 
 *Figure 24. Conceptual stopbank-stripping example. The reported volume comes from two checked surfaces; it is not automatically exact because the map looks detailed.*
 
@@ -888,7 +888,7 @@ For contractual quantities or other high-consequence decisions, use a project-sp
 
 ## 11.1 Accept the result for a stated purpose
 
-![QA and handover workflow](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/assets/training-v2/fig-d2-qa-handover.svg)
+![QA and handover workflow](https://enginebop.github.io/DronePilotTrainingManual/assets/training-v2/fig-d2-qa-handover.svg)
 
 *Figure 25. A sharp-looking map is not enough: check positioning, surface behaviour, outputs and the intended use before release.*
 
