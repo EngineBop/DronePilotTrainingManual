@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Download the BOPRC 290 mm permanent survey-control target STL print set.">
+  <title>3D survey-control target files | BOPRC Drone Manual</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0 34px}
+    .download-card{border:1px solid var(--line);border-radius:15px;padding:20px;background:#f8fbfc}
+    .download-card h2,.download-card h3{margin-top:0;border:0;padding:0}
+    .download-card p{color:var(--muted)}
+    .download-card.primary{grid-column:1/-1;background:#fff4ed;border-color:#ffc8ac}
+    .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:20px 0}
+    .specs div{background:#e8f3f7;border-radius:12px;padding:13px}
+    .specs strong{display:block;color:var(--navy);font-size:1.15rem}
+    .content ol li{margin:.65rem 0}
+  </style>
+</head>
+<body>
+<header class="site"><div class="bar"><a class="brand" href="../../index.html">BOPRC Drone Manual</a><nav><a href="../../index.html">Sections</a><a href="../../purpose-animation-final.html">Overview video</a><a href="../../theory-test.html">Theory test</a><a href="../BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a class="active" href="./">3D target files</a><a href="../templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header>
+<main class="layout">
+  <aside class="sidebar">
+    <a href="../../section-04-aircraft-servicing-and-permanent-survey-co.html">Back to Section 4</a>
+    <a class="active" href="./">3D target downloads</a>
+    <a href="#print">Printing instructions</a>
+    <a href="#field">Field installation note</a>
+  </aside>
+  <article class="content">
+    <div class="eyebrow">Permanent project survey control</div>
+    <h1>Download the 290 mm survey-control target</h1>
+    <p>This three-file STL set creates one proposed high-contrast BOPRC permanent control plate. The files are separate so Bambu Studio can assign the correct colours to each component; they are normally loaded together and printed as one fused plate in one job.</p>
+
+    <div class="specs">
+      <div><strong>290 × 290 mm</strong>assembled plate</div>
+      <div><strong>3.2 mm</strong>total thickness</div>
+      <div><strong>4 × 7 mm</strong>through-holes</div>
+      <div><strong>ASA</strong>recommended material</div>
+    </div>
+
+    <section class="download-grid" aria-label="STL downloads">
+      <div class="download-card primary">
+        <h2>Complete print set</h2>
+        <p>Contains the structural base, dark inlays and light inlays. Unzip them, then select all three files together when importing.</p>
+        <a class="button" href="boprc-survey-control-target-290mm-stl-set.zip" download>Download complete STL set</a>
+      </div>
+      <div class="download-card">
+        <h3>Structural base</h3>
+        <p>The 2.4 mm foundation of the plate.</p>
+        <a class="button secondary" href="boprc-survey-control-target-base-290mm.stl" download>Download base STL</a>
+      </div>
+      <div class="download-card">
+        <h3>Dark inlays</h3>
+        <p>Assign to black ASA for the dark quadrants.</p>
+        <a class="button secondary" href="boprc-survey-control-target-dark-inlays-290mm.stl" download>Download dark STL</a>
+      </div>
+      <div class="download-card">
+        <h3>Light inlays</h3>
+        <p>Assign to white ASA for the light quadrants.</p>
+        <a class="button secondary" href="boprc-survey-control-target-light-inlays-290mm.stl" download>Download light STL</a>
+      </div>
+    </section>
+
+    <h2 id="print">Print in Bambu Studio</h2>
+    <ol>
+      <li>In Bambu Studio, select all three STL files at once and choose <strong>Load as a single object with multiple parts</strong>. Do not auto-arrange the parts.</li>
+      <li>Assign the structural base and dark inlays to black ASA, and assign the light inlays to white ASA.</li>
+      <li>Print the combined model as one multi-colour job. The components fuse together during printing; they are not intended to be three loose field pieces.</li>
+      <li>Confirm the assembled size is 290 × 290 × 3.2 mm and every fixing hole is open before slicing.</li>
+      <li>Use ASA settings validated for the BOPRC printer, including suitable bed preparation, ventilation and warp control.</li>
+      <li>Add the point ID and approved wording as contrasting surface text while keeping the surveyed centre unobstructed.</li>
+      <li>Print a test piece before producing a full field set.</li>
+    </ol>
+
+    <blockquote><strong>Approved wording:</strong><br>BOPRC SURVEY CONTROL<br>PLEASE DO NOT REMOVE<br>0800 884 880</blockquote>
+
+    <h2 id="field">Field installation note</h2>
+    <p>This STL set is a proposed fabrication starting point, not a certified installation design. Select fasteners and the installation method for the ground conditions and services. Install the plate nearly flush on a compacted fine-gravel pad, keep the exact centre visible, and survey that centre after installation.</p>
+
+    <div class="pager"><a href="../../section-04-aircraft-servicing-and-permanent-survey-co.html">← Section 4: permanent survey control</a><a href="../../index.html">Manual home →</a></div>
+  </article>
+</main>
+</body>
+</html>

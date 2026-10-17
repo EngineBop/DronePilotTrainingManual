@@ -24,7 +24,7 @@ The complete website is stored in [`docs/`](docs/). It includes every manual sec
 - [DJI Terra ground-control-point CSV template](templates/dji-terra-ground-control-points.csv)
 - [DJI Terra independent-checkpoint CSV template](templates/dji-terra-independent-checkpoints.csv)
 - [CSV template instructions](templates/README.md)
-- [290 mm survey-control target 3D-print files](downloads/survey-control-target/README.md)
+- [290 mm survey-control target 3D-print files](https://enginebop.github.io/DronePilotTrainingManual/downloads/survey-control-target/)
 
 ## Contents
 
