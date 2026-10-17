@@ -8,11 +8,19 @@ This is the practical training manual and field reference for BOPRC's engineerin
 
 > **Published review edition:** Live aviation information, permissions, weather and site conditions must be checked for every flight.
 
-## Downloads
+## Start here
 
-- [Open the professional web edition](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site)
-- [Take the no-login practice theory test](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/theory-test.html)
-- [Printable PDF manual](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf)
+| Resource | Open it |
+|---|---|
+| **Complete online manual** | [Open the BOPRC Engineering Drone Manual](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/) |
+| **Animated overview** | [Watch “Why and how we use drones”](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/purpose-animation-final.html) |
+| **Practice theory test** | [Take the no-login online test](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/theory-test.html) |
+| **Printable manual** | [Download the PDF](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf) |
+
+The complete website is stored in [`docs/`](docs/). It includes every manual section, the approved animation, the theory test, images and downloadable resources. The long-form Markdown manual continues below in this README so it can also be read directly on GitHub.
+
+## Downloads and templates
+
 - [DJI Terra ground-control-point CSV template](templates/dji-terra-ground-control-points.csv)
 - [DJI Terra independent-checkpoint CSV template](templates/dji-terra-independent-checkpoints.csv)
 - [CSV template instructions](templates/README.md)
@@ -47,6 +55,8 @@ This is the practical training manual and field reference for BOPRC's engineerin
 ## 1.1 Why we operate drones
 
 The Engineering, Rivers & Drainage team uses drones to capture accurate, timely and repeatable information to support engineering decisions, construction monitoring, asset management and flood response.
+
+> **Visual overview:** [Watch the approved three-minute animation explaining the complete stopbank survey lifecycle](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/purpose-animation-final.html).
 
 Typical work includes:
 
