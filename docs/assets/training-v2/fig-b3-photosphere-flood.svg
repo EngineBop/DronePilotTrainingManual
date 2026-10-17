@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Photosphere flood capture workflow</title>
+  <desc id="desc">A five-stage workflow for repeatable Matrice 4E spherical panoramas used to document flood conditions.</desc>
+  <defs><style>.h{font:700 34px Arial;fill:#15364a}.s{font:18px Arial;fill:#234b5f}.k{font:700 19px Arial;fill:#15364a}.t{font:17px Arial;fill:#234b5f}.q{font:700 18px Arial;fill:#b54708}.a{stroke:#7b98a7;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7b98a7"/></marker></defs>
+  <rect width="1200" height="600" fill="#f5f9fa"/>
+  <text x="60" y="62" class="h">Matrice 4E Photosphere — record the flood in context</text>
+  <text x="60" y="96" class="s">Use a repeatable safe hover point, stable exposure and a clear event record.</text>
+
+  <circle cx="150" cy="260" r="82" fill="#dff2f7" stroke="#0f789f" stroke-width="5"/>
+  <path d="M80 260H220M150 190V330M102 212C135 245 165 275 198 308M198 212C165 245 135 275 102 308" stroke="#0f789f" stroke-width="4" fill="none"/>
+  <text x="92" y="385" class="k">1  Repeatable point</text><text x="92" y="416" class="t">Safe position and height</text>
+  <path d="M245 260H310" class="a"/>
+
+  <rect x="315" y="180" width="180" height="160" rx="18" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <text x="340" y="220" class="k">2  Lock settings</text><text x="340" y="255" class="t">Manual exposure</text><text x="340" y="284" class="t">Fixed white balance</text><text x="340" y="313" class="t">Focus checked</text>
+  <path d="M500 260H565" class="a"/>
+
+  <rect x="570" y="180" width="180" height="160" rx="18" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <text x="595" y="220" class="k">3  Capture sphere</text><text x="595" y="255" class="t">Stable hover</text><text x="595" y="284" class="t">Panorama mode</text><text x="595" y="313" class="t">Wait for completion</text>
+  <path d="M755 260H820" class="a"/>
+
+  <rect x="825" y="180" width="180" height="160" rx="18" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <text x="850" y="220" class="k">4  Check it</text><text x="850" y="255" class="t">Stitch and horizon</text><text x="850" y="284" class="t">No gaps or blur</text><text x="850" y="313" class="t">Files present</text>
+  <path d="M1010 260H1050" class="a"/>
+
+  <circle cx="1092" cy="260" r="58" fill="#164e63"/>
+  <text x="1075" y="254" style="font:700 20px Arial;fill:white">5</text><text x="1059" y="280" style="font:700 16px Arial;fill:white">Publish</text>
+  <text x="1018" y="385" class="k">Event record</text><text x="1018" y="416" class="t">Time, place, height</text>
+
+  <rect x="120" y="475" width="960" height="72" rx="14" fill="#fff7ed" stroke="#d97706" stroke-width="3"/>
+  <text x="150" y="508" class="q">Keep the stitched panorama and original source images.</text>
+  <text x="150" y="534" class="q">A Photosphere records context—it does not replace survey mapping.</text>
+</svg>

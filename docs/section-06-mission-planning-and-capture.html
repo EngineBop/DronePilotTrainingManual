@@ -1,0 +1,273 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>6. Mission planning and capture | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a class="active" href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>6. Mission planning and capture</h1>
+<h2>6.1 Matrice 4E area route in DJI Pilot 2</h2>
+<p><img src="assets/training-v2/fig-b2-m4e-area-route.svg" alt="Matrice 4E area route workflow"></p>
+<p><em>Figure 13. Create the area route, select the aircraft and wide mapping camera, draw the authorised work area, then set and verify the route.</em></p>
+<p><strong>Manufacturer workflow:</strong> <code>Flight Route</code> → <code>Create a Route</code> → <code>Area Route</code>; select the aircraft, camera and lens; choose <strong>Ortho Collection</strong>; set the boundary and route; preview it, save, upload and complete a low-hover check.</p>
+<p>The route must cover more than the immediate earthworks. Include the construction footprint, site establishment, vehicle and plant operating areas, laydown/overnight parking, the full land-access or compensation area, every permanent control point and a useful margin beyond them. Keep the route inside authorised land and airspace.</p>
+<p><img src="assets/training-v2/fig-b2-repeat-route-coverage.svg" alt="Repeat construction mission coverage"></p>
+<p><em>Figure 14. Conceptual coverage plan. Required features and control belong inside the reliable captured area, not at the edge where turns and reconstruction artefacts are more likely.</em></p>
+<p><strong>Proposed BOPRC starting point — Matrice 4E routine photogrammetry:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Starting value</th>
+<th>Adjust when</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Route</td>
+<td>Area Route / Ortho Collection</td>
+<td>Use another route type only when the capture purpose requires it.</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Matrice 4E wide 20 MP</td>
+<td>Confirm the correct camera/lens is selected.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td><strong>60 m AGL</strong></td>
+<td>Change to meet required GSD, terrain, obstacles, airspace and coverage. Pilot 2&#39;s displayed GSD should be checked.</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td><strong>5–7 m/s</strong></td>
+<td>Slow down in low light, gusty conditions, complex terrain or where sharper images are needed.</td>
+</tr>
+<tr>
+<td>Forward overlap</td>
+<td><strong>80%</strong></td>
+<td>Increase to about 85% for relief, vegetation or difficult edges.</td>
+</tr>
+<tr>
+<td>Side overlap</td>
+<td><strong>70%</strong></td>
+<td>Increase to about 75% for relief, vegetation or difficult edges.</td>
+</tr>
+<tr>
+<td>Gimbal</td>
+<td><strong>−90° nadir</strong></td>
+<td>Add oblique capture only when required and planned.</td>
+</tr>
+<tr>
+<td>RTK</td>
+<td><strong>FIX before capture</strong></td>
+<td>Pause survey capture if correction quality becomes uncertain.</td>
+</tr>
+<tr>
+<td>Shutter</td>
+<td>Mechanical shutter</td>
+<td>Check that the mission can maintain the required photo interval.</td>
+</tr>
+<tr>
+<td>Elevation optimisation</td>
+<td>On for orthophoto work</td>
+<td>Review the actual DJI workflow and output purpose.</td>
+</tr>
+<tr>
+<td>Completion action</td>
+<td>Return-to-home when suitable</td>
+<td>Change when the site plan requires hover or landing; always verify RTH height/path.</td>
+</tr>
+</tbody></table>
+<p>These values are not a substitute for designing the mission. Adjust them for the required GSD, terrain, obstacles, light, wind, safe operating area and agreed accuracy.</p>
+<p><strong>Repeat construction survey:</strong> save the checked pre-construction route as the controlled baseline. On the next visit, open it from the Flight Route library, review the saved aircraft/camera, boundary, height, speed, overlap, gimbal, RTK and completion action, and rerun it only after current airspace, access, obstacles, plant, take-off area and RTH path have been checked. If it no longer fits the site safely, save a controlled revision and record why it changed; do not overwrite the baseline casually.</p>
+<p>Before each construction-site flight, confirm the site manager and BOPRC project contact, induction/sign-in requirements, flight window, workers, exclusion area and plant movements. No saved route replaces a current go/no-go decision.</p>
+<blockquote>
+<p><strong>Storage ready:</strong> each aircraft travels with a clean, compatible, correctly formatted working microSD card and its own ready backup card. Confirm the card is recognised, has enough space and records a test file. Never format the only copy of a mission.</p>
+</blockquote>
+<h2>6.2 Matrice 4E photo settings</h2>
+<p>The Matrice 4E wide mapping camera is a 20 MP, 4/3 CMOS camera with adjustable f/2.8–f/11 aperture and a mechanical shutter.</p>
+<h3>Nadir mapping photographs</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Proposed starting value</th>
+<th>Practical note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ISO</td>
+<td><strong>100</strong></td>
+<td>Keep noise low; avoid going above 400 unless conditions require it.</td>
+</tr>
+<tr>
+<td>Shutter</td>
+<td><strong>1/800–1/1000 s</strong></td>
+<td>Use a faster shutter for wind, movement or a faster route. Check actual images for blur.</td>
+</tr>
+<tr>
+<td>Aperture</td>
+<td><strong>f/5.6</strong></td>
+<td>Work within roughly f/4–f/8 as light changes. Avoid forcing ISO or shutter outside the useful range.</td>
+</tr>
+<tr>
+<td>White balance</td>
+<td>Fixed Manual, Sunny or Cloudy</td>
+<td>Do not leave it changing from image to image across a mapping mission.</td>
+</tr>
+<tr>
+<td>Focus</td>
+<td>Autofocus on a representative textured surface, verify, then lock/manual where available</td>
+<td>Do not use an unverified infinity setting. Inspect a test image at full size.</td>
+</tr>
+<tr>
+<td>File format</td>
+<td>JPEG for routine mapping</td>
+<td>Use JPEG + RAW only when the purpose justifies the additional interval, storage and processing cost.</td>
+</tr>
+</tbody></table>
+<p>Before the production route, open a test image and check sharpness, exposure, storage and RTK/metadata. A short test is quicker than re-flying the full site.</p>
+<h3>Oblique record photographs</h3>
+<p>Oblique images are angled records of flood conditions, assets, effects, site context and construction activity. They do not replace the nadir mapping dataset.</p>
+<ul>
+<li>use the wide camera unless a defined inspection requires another lens;</li>
+<li>use ISO 100–400, a shutter fast enough to prevent blur and a fixed white balance as practical starting points;</li>
+<li>make deliberate, overlapping views from a safe stable position rather than random isolated images;</li>
+<li>retain EXIF/location information and record the event/site, date and time, view direction, height and what the sequence shows; and</li>
+<li>retain the originals under the Survey/Event ID. Approved copies are intended to feed the future Flood Media Viewer when that system is ready.</li>
+</ul>
+<h2>6.3 Matrice 4E video settings</h2>
+<p>Video provides progress and visual updates for project, management, ELT/leadership, stakeholder and special-interest-group meetings. It also provides a time-specific construction or flood record and may help resolve a later question about what occurred and when.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Proposed starting value</th>
+<th>Practical note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Camera</td>
+<td>Wide camera</td>
+<td>Use zoom only for a defined inspection need; avoid digital zoom as a substitute for safe positioning.</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td><strong>4K, 30 fps</strong></td>
+<td>The M4E records 4K or Full HD at 30 fps.</td>
+</tr>
+<tr>
+<td>Codec</td>
+<td><strong>H.264</strong></td>
+<td>Use H.265 only where the viewing/editing workflow supports it.</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td><strong>100–400</strong></td>
+<td>Keep it low where possible.</td>
+</tr>
+<tr>
+<td>Shutter</td>
+<td><strong>1/60 s</strong> for normal smooth 30 fps video</td>
+<td>Use 1/250 s or faster when extracting sharp still frames or recording faster movement is more important than natural motion blur.</td>
+</tr>
+<tr>
+<td>Aperture</td>
+<td><strong>f/4–f/5.6</strong></td>
+<td>Adjust for the light while protecting shutter and ISO.</td>
+</tr>
+<tr>
+<td>White balance</td>
+<td>Fixed manual value/preset</td>
+<td>Avoid visible colour changes within a clip.</td>
+</tr>
+</tbody></table>
+<p>Use slow, deliberate gimbal movement and short labelled clips. Record what the clip shows, where it was taken, the direction of view and the event or construction stage. Video supports communication and the project record; it is useful only when its master file and context can be found later.</p>
+<h2>6.4 Photosphere capture for flood records</h2>
+<p>DJI lists Panorama as a supported Matrice 4E still-photo mode, using 20 MP source images and producing an approximately 100 MP stitched panorama. Use Photospheres to show flood conditions in context — not as survey measurement.</p>
+<p><img src="assets/training-v2/fig-b3-photosphere-flood.svg" alt="Matrice 4E Photosphere workflow"></p>
+<p><em>Figure 15. Use a repeatable safe hover point, fixed exposure and a complete event record.</em></p>
+<ol>
+<li>Choose a safe, repeatable hover point and a height that gives the required context. <strong>Proposed starting range: 30–60 m AGL</strong>, subject to VLOS, airspace, obstacles and the event purpose.</li>
+<li>In the current DJI Pilot 2 camera view, select the wide camera and Panorama mode. Confirm the precise menu on the installed controller and verify focus.</li>
+<li>Use stable manual exposure and fixed white balance where the current interface allows it, reducing visible seams between frames.</li>
+<li>Hold a stable hover and wait until the capture is complete.</li>
+<li>Inspect the stitch, horizon, gaps and blur before leaving the site.</li>
+<li>Keep the stitched panorama and original source images.</li>
+<li>Record site, flood/event name, date/time, position, height, weather and any available water-level reference.</li>
+</ol>
+<p><strong>DroneDeploy option:</strong> current DroneDeploy guidance supports uploading and managing panorama media from mobile or web, including processed panoramas from other devices. Where this remains the team workflow, open the correct project and date, upload the panorama/source set using the current <strong>Upload → New Upload</strong> path, confirm the media is recognised as a panorama, check the stitched view and location, name it with the Event/Survey ID and retain a durable reference in BOPRC metadata. Subscription features and menu labels can change; validate this workflow with the team&#39;s account before controlled issue.</p>
+<p>Keep the original source images and DJI stitch in BOPRC-managed storage even when a copy is hosted in DroneDeploy. A cloud share link is not the archive.</p>
+<h2>6.5 M350 RTK and Zenmuse L2 LiDAR route</h2>
+<p>The settings belong to the <strong>Zenmuse L2 payload on the M350 RTK</strong>, not to the aircraft alone.</p>
+<p><strong>Physical setup</strong></p>
+<ol>
+<li>Inspect the M350 RTK, matched battery pair, propellers, controller, payload and clean working/backup storage cards.</li>
+<li>With the aircraft powered off, fit and lock the L2 on the supported gimbal connector; check the cap, lens/window and connector are clean.</li>
+<li>Power the controller, then the aircraft. Confirm the L2 is recognised and the aircraft, payload and firmware combination is supported.</li>
+<li>Confirm gimbal movement, storage, GNSS/RTK and status messages, then complete the normal low-hover/function check.</li>
+</ol>
+<p><strong>DJI Pilot 2 setup</strong></p>
+<ol>
+<li>Open or create the approved <strong>Area Route / LiDAR Mapping</strong> task and confirm <strong>M350 RTK + Zenmuse L2</strong>.</li>
+<li>Check the authorised boundary and the same full-site/edge-margin logic used in Section 6.1.</li>
+<li>Set height, speed, scan mode, side overlap, IMU calibration, RGB colouring, visible-image overlap and completion action.</li>
+<li>Confirm home point, RTH height/path, RTK FIX, storage, obstacle settings and route preview before upload.</li>
+</ol>
+<p><strong>Manufacturer reference:</strong> DJI describes LiDAR Mapping/Area Route, repetitive scanning, IMU calibration, RGB colouring and RTK FIX. Its published reference includes 150 m altitude, 15 m/s and side overlap of at least 20%. A routine Part 101 flight in New Zealand is limited to 120 m AGL, so <strong>150 m is not a routine BOPRC Part 101 setting</strong>.</p>
+<p><strong>Proposed BOPRC Part 101 starting point — confirm through vendor consultation and field validation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Starting value</th>
+<th>Practical note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Route</td>
+<td>Area Route / LiDAR Mapping</td>
+<td>Confirm the payload and mission type before setting the boundary.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td><strong>80–100 m AGL</strong></td>
+<td>Adjust for density, terrain, vegetation, required detail, obstacles and the 120 m Part 101 ceiling.</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td><strong>8–12 m/s</strong></td>
+<td>Slow down for greater density, complex terrain or difficult vegetation.</td>
+</tr>
+<tr>
+<td>Scan mode</td>
+<td><strong>Repetitive</strong></td>
+<td>DJI&#39;s normal topographic-mapping recommendation.</td>
+</tr>
+<tr>
+<td>Side overlap</td>
+<td><strong>30% general</strong></td>
+<td>Increase toward <strong>50%</strong> for steep terrain, denser coverage or difficult edges.</td>
+</tr>
+<tr>
+<td>IMU calibration</td>
+<td>Enabled</td>
+<td>Allow the planned calibration segments and do not clip them with a tight boundary.</td>
+</tr>
+<tr>
+<td>RTK</td>
+<td>FIX before capture</td>
+<td>Pause and assess after correction or calibration warnings.</td>
+</tr>
+<tr>
+<td>RGB colouring</td>
+<td>On when required</td>
+<td>Confirm image exposure and storage as well as LiDAR capture.</td>
+</tr>
+<tr>
+<td>Visible-image forward overlap</td>
+<td><strong>80% if an orthophoto is required</strong></td>
+<td>Do not add the orthophoto output when it is not needed.</td>
+</tr>
+<tr>
+<td>Completion action</td>
+<td>Return-to-home when suitable</td>
+<td>Verify RTH path, height, wind and landing area.</td>
+</tr>
+</tbody></table>
+<p>Before leaving site, check that the complete L2 mission folder, trajectory/positioning files, LiDAR data and any required RGB images are present.</p>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-05-on-site-positioning-options.html">← Previous</a><a class="button" href="section-07-post-flight-data-management.html">Next →</a></nav></article></main></body></html>

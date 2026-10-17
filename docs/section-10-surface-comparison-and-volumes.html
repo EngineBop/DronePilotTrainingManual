@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>10. Surface comparison and volumes | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a class="active" href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>10. Surface comparison and volumes</h1>
+<p><img src="assets/training-v2/fig-e1-surface-comparison.svg" alt="Conceptual pre/post surface comparison and Cut Fill result"></p>
+<p><em>Figure 24. Conceptual stopbank-stripping example. The reported volume comes from two checked surfaces; it is not automatically exact because the map looks detailed.</em></p>
+<h2>10.1 Align the surfaces first</h2>
+<p>Before any subtraction or Cut Fill calculation, the two surfaces must use:</p>
+<ul>
+<li>the same horizontal coordinate system;</li>
+<li>the same vertical datum and units;</li>
+<li>the same cell size;</li>
+<li>coincident cell alignment/snap raster;</li>
+<li>the same analysis extent and valid comparison boundary; and</li>
+<li>suitable, comparable ground classification.</li>
+</ul>
+<p>Use <strong>Project Raster</strong>, <strong>Resample</strong>, processing extent, cell size and <strong>Snap Raster</strong> deliberately. Reprojection or resampling does not repair an incorrect height datum or poor source data.</p>
+<h2>10.2 Pre/post difference</h2>
+<p>For a simple signed elevation-change raster:</p>
+<pre><code class="language-text">Difference = Post_DEM - Pre_DEM
+</code></pre>
+<ul>
+<li>positive values mean the later surface is higher;</li>
+<li>negative values mean the later surface is lower; and</li>
+<li>values near zero may still contain measurement and surface-modelling noise.</li>
+</ul>
+<p>Mask water, vegetation, moving stock/plant, edge interpolation and areas not common to both surveys before reporting change. Compare unchanged checkpoints or stable surfaces to understand the noise floor.</p>
+<p>Validate <strong>both</strong> surfaces against independent checkpoints. A useful first estimate of the combined vertical uncertainty is:</p>
+<pre><code class="language-text">Combined RMSEz = √(RMSEpre² + RMSEpost²)
+</code></pre>
+<p>Use a project-approved minimum detectable change so differences inside the combined noise band are reported as <strong>no reliable change</strong>, not stripping or fill. Check stable, unchanged ground for a systematic vertical offset before calculating volumes.</p>
+<h2>10.3 Cut Fill</h2>
+<p>ArcGIS Pro&#39;s <strong>Cut Fill</strong> tool compares coincident before and after surfaces and reports areas and volumes of change. In the Esri output convention:</p>
+<ul>
+<li><strong>positive volume = cut / material removed</strong>; and</li>
+<li><strong>negative volume = fill / material added</strong>.</li>
+</ul>
+<p>This sign convention is different from the simple <code>Post - Pre</code> difference above. State the convention in every map and table so users do not reverse the result.</p>
+<p>Report:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Record</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source surveys</td>
+<td>Dates, aircraft/payload, processing project and accepted surface names</td>
+</tr>
+<tr>
+<td>Comparison setup</td>
+<td>CRS, vertical datum, cell size, snap raster, extent and mask</td>
+</tr>
+<tr>
+<td>Result</td>
+<td>Cut, fill, net change, area and units</td>
+</tr>
+<tr>
+<td>Checks</td>
+<td>Checkpoints/stable-area comparison and review completed</td>
+</tr>
+<tr>
+<td>Limitations</td>
+<td>Water, vegetation, incomplete coverage, changed classification or edge effects</td>
+</tr>
+</tbody></table>
+<p>Use a flat design surface only when it is genuinely the approved comparison surface. Record its elevation, datum, units and boundary; never create a convenient flat raster and treat it as an as-built requirement without confirmation.</p>
+<p>Volume sensitivity is easy to underestimate. A persistent <strong>0.02 m</strong> vertical offset across <strong>10,000 m²</strong> changes the calculated volume by about <strong>200 m³</strong>. The simple <code>area × vertical uncertainty</code> calculation is a useful conservative sensitivity check, not a complete statistical confidence interval, because neighbouring surface cells are correlated and random errors may partly cancel.</p>
+<p>For contractual quantities or other high-consequence decisions, use a project-specific QA method and independent validation such as rover/level cross-sections, a known test area or comparison with an accepted conventional survey. Report gross cut, gross fill, net volume, compared area, pre/post checkpoint results, stable-area offset, exclusions and the accepted use together.</p>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-09-arcgis-pro-elevation-products.html">← Previous</a><a class="button" href="section-11-qa-acceptance-and-civil-3d-handover.html">Next →</a></nav></article></main></body></html>

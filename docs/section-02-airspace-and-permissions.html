@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>2. Airspace and permissions | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a class="active" href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>2. Airspace and permissions</h1>
+<h2>2.1 Rules every pilot needs</h2>
+<p>Normal BOPRC operations under this manual use aircraft below 25 kg and must comply with the current Civil Aviation Rule Part 101 and CATI 101-1.</p>
+<p>Before launch, confirm:</p>
+<ul>
+<li><input disabled="" type="checkbox"> the aircraft will remain within unaided visual line of sight and below cloud;</li>
+<li><input disabled="" type="checkbox"> the planned height is no more than 400 ft (120 m) above ground unless a current legal pathway allows otherwise;</li>
+<li><input disabled="" type="checkbox"> the drone will give way to and remain clear of every crewed aircraft;</li>
+<li><input disabled="" type="checkbox"> required consent for people and property has been obtained;</li>
+<li><input disabled="" type="checkbox"> controlled-airspace, aerodrome and special-use-airspace conditions are met;</li>
+<li><input disabled="" type="checkbox"> the flight will not create a hazard; and</li>
+<li><input disabled="" type="checkbox"> weather, obstacles, return-to-home, lost-link action and landing areas are suitable.</li>
+</ul>
+<p><strong>Legal requirement:</strong> if the job cannot comply with Part 101, stop and refer it for specialist aviation advice or an appropriate Part 102 operator. Logging a flight in AirShare does not by itself provide every approval.</p>
+<h2>2.2 Check the airspace</h2>
+<p><strong>Controlled airspace</strong> requires Air Traffic Control authorisation unless a precise legal exception applies. <strong>Uncontrolled airspace (Class G)</strong> can still contain helicopters, agricultural aircraft, microlights, gliders and other low-level traffic.</p>
+<p>Within 4 km of an aerodrome, extra requirements normally apply. Check private strips, heliports, hospital helipads and water aerodromes as well as public airports.</p>
+<p><img src="assets/fig-03-airspace-decision.svg" alt="Airspace and permissions decision path"></p>
+<p><em>Figure 3. Use current information for the actual place, date and time. DJI warnings or unlocks are not the legal source for New Zealand airspace.</em></p>
+<p>Use these sources together:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>What it provides</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://airshare.co.nz/"><strong>AirShare</strong></a></td>
+<td>Drone airspace map, advisories, flight logging and ATC/aerodrome requests.</td>
+</tr>
+<tr>
+<td><a href="https://shop.aeropath.aero/collections/2025-2026-visual-navigation-charts"><strong>Current VNC</strong></a></td>
+<td>Controlled and special-use airspace, aerodromes, reporting points and frequencies.</td>
+</tr>
+<tr>
+<td><a href="https://www.aip.net.nz/"><strong>Aeronautical Information Publication (AIP) New Zealand</strong></a></td>
+<td>Current aerodrome charts, frequencies and local procedures.</td>
+</tr>
+<tr>
+<td><a href="https://www.aip.net.nz/"><strong>AIP Supplements</strong></a> and <a href="https://ifis.airways.co.nz/"><strong>IFIS NOTAMs</strong></a></td>
+<td>Temporary restrictions, hazards, closures and activity. Recheck close to launch.</td>
+</tr>
+</tbody></table>
+<h2>2.3 Local airspace quick reference</h2>
+<p>This table is a planning aid only. <strong>Check the current AIP, VNC, NOTAM and AirShare entry on the day.</strong> Do not transmit on an aviation frequency unless appropriately qualified and authorised.</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Planning contact and process</th>
+<th>Published frequency information checked for this draft</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Whakatāne Airport (NZWK)</strong></td>
+<td>Uncontrolled. Airport Operations <strong>07 308 8397</strong>, <strong><a href="mailto:airport@whakatane.govt.nz">airport@whakatane.govt.nz</a></strong>. Within 4 km: use AirShare and email the airport with flight details and a map; wait for conditions/agreement.</td>
+<td>Unattended <strong>118.6 MHz</strong>; Christchurch Information <strong>121.25 MHz</strong></td>
+</tr>
+<tr>
+<td><strong>Tauranga Airport (NZTG)</strong></td>
+<td>Controlled. Airport <strong>07 575 2456</strong>, <strong><a href="mailto:contact@tgaairport.nz">contact@tgaairport.nz</a></strong>; operational alternate <strong>021 846 429</strong>. Use AirShare/ATC and follow airport conditions.</td>
+<td>Tower/unattended <strong>118.3 MHz</strong>; alternates <strong>123.4 / 129.2 MHz</strong>; ATIS <strong>126.6 MHz</strong></td>
+</tr>
+<tr>
+<td><strong>Rotorua Airport (NZRO)</strong></td>
+<td>Controlled. Airport Operations <strong>027 274 4508</strong>; Operations Manager <strong>027 494 2419</strong>; Airways Tower <strong>07 345 5199</strong>.</td>
+<td>Tower/unattended <strong>121.2 MHz</strong>; additional tower <strong>120.1 MHz</strong>; ATIS <strong>128.8 MHz</strong>; Bay Approach <strong>119.5 / 123.8 MHz</strong></td>
+</tr>
+<tr>
+<td><strong>Rotorua Lakes water aerodrome (NZRL)</strong></td>
+<td>Floatplane activity. Volcanic Air <strong>07 348 9984</strong>; also check Rotorua controlled airspace.</td>
+<td>Rotorua Tower <strong>121.2 / 120.1 MHz</strong>; Tarawera MBZ <strong>120.9 MHz</strong></td>
+</tr>
+<tr>
+<td><strong>Galatea (NZGA)</strong></td>
+<td>Uncontrolled; NORDO microlight/gyrocopter and model-aircraft activity noted. Obtain operator agreement within 4 km.</td>
+<td>Unattended <strong>119.1 MHz</strong></td>
+</tr>
+<tr>
+<td><strong>Ōpōtiki Aerodrome</strong></td>
+<td>Council consent is required within 4 km: <strong>07 315 3030</strong>, <strong><a href="mailto:info@odc.govt.nz">info@odc.govt.nz</a></strong>.</td>
+<td>Retrieve current AIP/VNC/AirShare information; no static frequency is reproduced here.</td>
+</tr>
+</tbody></table>
+<p>Aeronautical information contacts: Airways NOTAM Office <strong>03 358 1688</strong>, <strong><a href="mailto:nof@airways.co.nz">nof@airways.co.nz</a></strong>; National Briefing Office <strong>0800 626 756</strong> or <strong>03 358 1509</strong>; Aeropath <strong>04 471 1888</strong> or <strong>0800 500 045</strong>, <strong><a href="mailto:aim@aeropath.aero">aim@aeropath.aero</a></strong>.</p>
+<p><em>Contacts and frequencies were last checked against official sources on 15 October 2026. Recheck them for the actual flight.</em></p>
+<h2>2.4 Crewed aircraft, land and other approvals</h2>
+<p>Agricultural aircraft are a particular regional risk. Before rural or river-corridor work, ask the landowner, farm manager and site contact about spraying, topdressing, frost work, lifting, mustering, helicopters, farm strips, loading areas and neighbouring activity. If low-level aircraft activity is possible but unresolved, do not launch.</p>
+<p>During flight, crewed aircraft always have priority. Keep a clear descent and landing route and land promptly whenever separation is uncertain.</p>
+<p>Airspace approval does not replace other approvals:</p>
+<ul>
+<li><strong>Private or Māori land:</strong> confirm owner and occupier permission, access, gates, stock, biosecurity, sensitive locations and imagery restrictions.</li>
+<li><strong>DOC land:</strong> use the DOC drone permission/concession process and follow any wildlife, visitor and cultural conditions.</li>
+<li><strong>Council land:</strong> check the current bylaw, reserve plan and land-manager process for that site.</li>
+<li><strong>State highways:</strong> the current Waka Kotahi pathway expects state-highway overflight to use a Part 102-certificated operator and a suitable risk plan. BOPRC&#39;s Part 101 team must not undertake that overflight under this manual. General contact: <strong>0800 4 HIGHWAYS (0800 44 44 49)</strong>.</li>
+<li><strong>Local roads:</strong> confirm the road-controlling authority and traffic/public controls. A person standing in a live carriageway is not an acceptable spotter.</li>
+</ul>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-01-purpose-and-operational-responsibilities.html">← Previous</a><a class="button" href="section-03-plan-fly-and-respond-safely.html">Next →</a></nav></article></main></body></html>

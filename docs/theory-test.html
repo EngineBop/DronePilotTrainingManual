@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BOPRC engineering drone operations practice theory test">
+  <title>Practice theory test | BOPRC Drone Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quiz-page">
+  <header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a class="active" href="theory-test.html">Theory test</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header>
+  <main class="quiz-shell">
+    <section id="quiz-intro" class="quiz-intro">
+      <div class="quiz-intro-copy">
+        <p class="eyebrow">Practice knowledge check</p>
+        <h1>BOPRC Engineering Drone Theory Test</h1>
+        <p class="quiz-lead">Check your understanding of the rules, safe field practice, survey control, capture, processing and quality checks covered in the manual.</p>
+        <div class="quiz-facts" aria-label="Test summary"><span><strong>31</strong> questions</span><span><strong>4</strong> sections</span><span><strong>20–25</strong> minutes</span></div>
+        <div class="notice"><strong>Practice only.</strong> This is a learning check, not proof of pilot competency or a substitute for current CAA rules, BOPRC procedures, supervision or practical assessment. Results stay in this browser and no login is required.</div>
+        <div class="quiz-section-preview" id="quiz-section-preview"></div>
+        <div class="actions"><button class="button quiz-button" id="start-quiz" type="button">Start the theory test</button><button class="button secondary quiz-button" id="clear-saved" type="button" hidden>Clear saved progress</button></div>
+      </div>
+      <figure class="quiz-intro-visual"><img src="animation-assets/scene-prelaunch.png" alt="Drone team completing pre-launch checks beside a stopbank project"><figcaption>Questions use practical situations from the BOPRC field workflow.</figcaption></figure>
+    </section>
+    <section id="quiz-app" class="quiz-app" hidden aria-live="polite">
+      <div class="quiz-topline"><a href="index.html" class="quiz-back">← Manual</a><div class="quiz-progress-copy"><span id="section-label">Section</span><strong id="question-count">Question</strong></div></div>
+      <div class="quiz-progress" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="31" aria-valuenow="0"><span id="progress-fill"></span></div>
+      <article class="quiz-card">
+        <div id="question-image-wrap" class="quiz-image" hidden><img id="question-image" src="" alt=""></div>
+        <p class="quiz-topic" id="question-topic"></p><h2 id="question-title"></h2><p class="quiz-instruction" id="question-instruction"></p>
+        <form id="answer-form"><fieldset id="answer-options"></fieldset><button type="submit" class="button quiz-button" id="check-answer">Check answer</button></form>
+        <div id="feedback" class="quiz-feedback" hidden tabindex="-1"></div><div class="quiz-next-row"><button class="button quiz-button" id="next-question" type="button" hidden>Next question →</button></div>
+      </article>
+    </section>
+    <section id="quiz-results" class="quiz-results" hidden>
+      <p class="eyebrow">Practice test complete</p><h1 id="result-title">Your result</h1><div class="result-score"><strong id="result-percent">0%</strong><span id="result-fraction">0 / 31 correct</span></div><p id="result-message" class="quiz-lead"></p>
+      <div id="section-results" class="section-results"></div>
+      <div class="notice"><strong>Remember:</strong> a strong theory result supports training, but safe drone work also depends on current airspace checks, sound judgement, site coordination and practical competence.</div>
+      <div class="actions"><button class="button quiz-button" id="retry-missed" type="button">Retry missed questions</button><button class="button secondary quiz-button" id="restart-quiz" type="button">Restart full test</button><a class="button secondary" href="section-01-purpose-and-operational-responsibilities.html">Review the manual</a></div>
+    </section>
+  </main>
+  <script src="theory-test.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>4. Aircraft, servicing and permanent survey control | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a class="active" href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>4. Aircraft, servicing and permanent survey control</h1>
+<h2>4.1 Aircraft quick reference</h2>
+<table>
+<thead>
+<tr>
+<th>Matrice 4E — mapping and inspection</th>
+<th>M350 RTK + Zenmuse L2 — LiDAR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Confirm the mission, required GSD, height, overlap and boundary.</td>
+<td>Confirm the supported aircraft, payload and firmware combination.</td>
+</tr>
+<tr>
+<td>Confirm network RTK/NTRIP correction source, RTK status and home point.</td>
+<td>Fit a matched battery pair; check payload mounting, storage, RTK and required calibration.</td>
+</tr>
+<tr>
+<td>Check focus, exposure, triggering and a short verification area.</td>
+<td>Confirm height, speed, line spacing, scan mode, terrain and edge coverage for the job.</td>
+</tr>
+<tr>
+<td>If corrections become unstable, keep the flight safe and pause survey capture until data quality is understood.</td>
+<td>Before leaving site, verify the required LiDAR and trajectory files are present.</td>
+</tr>
+</tbody></table>
+<p><img src="assets/fig-04-matrice-4e-ntrip.svg" alt="Matrice 4E network RTK workflow"></p>
+<p><em>Figure 4. Matrice 4E mapping workflow using an approved NTRIP correction source.</em></p>
+<p><img src="assets/fig-05-m350-l2.svg" alt="M350 RTK and Zenmuse L2 capture workflow"></p>
+<p><em>Figure 5. M350 RTK and L2 capture chain. Check the finished work against independent survey control.</em></p>
+<p><strong>Manufacturer guidance:</strong> use the current DJI manual matching the aircraft, payload, battery and firmware in use. Published performance figures are conditional; the project&#39;s independent checks determine whether the result is acceptable.</p>
+<h2>4.2 Service and repair</h2>
+<p>Ferntech&#39;s service process includes cleaning and inspection, battery checks, firmware and calibration checks, test flight and maintenance evidence.</p>
+<p><img src="assets/fig-07-service-workflow.svg" alt="Ferntech service and return-to-use workflow"></p>
+<p><em>Figure 6. Booking, assessment, repair and safe return to service.</em></p>
+<p><strong>Proposed BOPRC starting point — approval required:</strong> service the operational fleet every <strong>six months</strong>, with <strong>annual service as the minimum</strong>. A fault, impact, water/dust ingress, abnormal vibration, repeated link/GNSS/RTK warning, battery damage or manufacturer notice triggers earlier assessment.</p>
+<ol>
+<li>Mark the affected equipment unavailable and preserve logs and parts.</li>
+<li>Back up project data and document the fault, event, firmware and batteries.</li>
+<li>Submit the current <a href="https://www.ferntech.co.nz/Service-Request-Form">Ferntech service request</a> and follow its packing instructions. Service email checked for this draft: <strong><a href="mailto:repairs@ferntech.co.nz">repairs@ferntech.co.nz</a></strong>.</li>
+<li>Obtain the diagnosis, quote, warranty position and internal financial approval.</li>
+<li>Retain the service certificate and parts, firmware, calibration, battery and test-flight records.</li>
+<li>On return, compare the equipment and configuration with the private register.</li>
+<li>Complete a low-risk function flight before production use.</li>
+<li>Close the defect and update Property&#39;s register where required.</li>
+</ol>
+<h2>4.3 Equipment register</h2>
+<p><strong>Confirmed internal procedure:</strong> Property holds and maintains the private equipment and configuration register. Follow that system for additions, transfers, repairs, loss, disposal and material changes. This manual must not publish serial numbers, credentials, unlock details or a live inventory. Flight records use internal asset IDs.</p>
+<h2>4.4 Permanent project survey control</h2>
+<p>A permanent control network makes repeat construction surveys easier to compare. It should serve one defined contract work site — not an entire river reach and not neighbouring property.</p>
+<p>For a suitable linear site, start with <strong>six permanent ground control points (GCPs)</strong> plus separate independent checkpoints:</p>
+<ul>
+<li>two near one end of the work;</li>
+<li>two near the other end; and</li>
+<li>two near the middle.</li>
+</ul>
+<p>Keep every point inside the confirmed project/contract access area, but outside current and future earthworks, haul routes, plant tracking, laydown, road or stopbank-crest traffic and other likely disturbance. Final locations require field and survey verification.</p>
+<p><img src="assets/review-v2/gcp-layout-authorised-corridor.svg" alt="Six-point control layout inside the authorised project corridor"></p>
+<p><em>Figure 7. Put control outside the work — not outside the project. Do not place targets in neighbouring paddocks without specific permission and secure project access.</em></p>
+<p>The photo below shows only the pair that might be visible near one end of a work area. The targets are small, close to the work and clear of disturbed ground.</p>
+<p><img src="assets/review-v2/gcp-pair-stopbank-works-concept-v2.png" alt="Conceptual pair of permanent GCPs beside stopbank works"></p>
+<p><em>Figure 8. Conceptual overlay only — not a record of installed BOPRC control. Verify scale, access, services and future works on site.</em></p>
+<p>The proposed in-house target is a <strong>290 × 290 mm ASA plate</strong> with black-and-white quadrants, an exact surveyable centre and four low-profile corner fixings. ASA is preferred for the prototype because it is more suitable than PLA for outdoor UV and weather exposure. The council&#39;s Bambu Lab H2D has a published dual-nozzle work area of 300 × 320 mm, so the proposed plate fits with a small margin. Confirm the sliced toolpath, final thickness, colour contrast, print settings and outdoor durability through a field prototype.</p>
+<p><img src="assets/review-v2/boprc-gcp-plate-installation-concept-v1.png" alt="BOPRC survey-control plate concept"></p>
+<p><em>Figure 9. Proposed face: BOPRC SURVEY CONTROL, unique point number, PLEASE DO NOT REMOVE and 0800 884 880.</em></p>
+<p><img src="assets/review-v2/boprc-gcp-plate-dimensioned.svg" alt="Dimensioned plate and nearly flush installation"></p>
+<p><em>Figure 10. Plate installed almost flush on a level compacted fine-gravel pad with a small vegetation-free collar.</em></p>
+<p>Installation:</p>
+<ol>
+<li>Confirm ownership/access, underground services, present and future works, mowing, stock, flooding and erosion risk with the survey lead and site supervisor.</li>
+<li>Remove vegetation and loose topsoil only as needed. Prepare a level, drained, compacted fine-gravel pad and suitable weed-resistant separator.</li>
+<li>Bed the plate almost flush with the surrounding ground. Use a small gravel collar to reduce growth and ponding.</li>
+<li>Use four low-profile fixings appropriate to the ground and services. Avoid raised heads, sharp edges and mower, tyre or trip hazards.</li>
+<li>Survey the exact centre and record its ID, location, method, date, quality, photographs and witness description.</li>
+<li>Before each repeat survey, check the plate against its reference photograph. Resurvey after suspected movement, flooding, grading, vehicle strike or replacement.</li>
+</ol>
+<p>Use <strong>NZTM2000 / NZGD2000 (EPSG:2193)</strong> and <strong>NZVD2016 (EPSG:7839)</strong> unless the project specifies and records another coordinate system. Keep checkpoints out of the control adjustment: their residuals provide the independent check on the finished product.</p>
+<p>The construction-survey sequence is: confirm the design, access and occupied work areas → install control outside the work but inside authorised project access → complete the full pre-construction baseline survey → save that checked route → repeat it during construction where it remains safe and suitable. If the project boundary or work layout changes, revise and record the route deliberately.</p>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-03-plan-fly-and-respond-safely.html">← Previous</a><a class="button" href="section-05-on-site-positioning-options.html">Next →</a></nav></article></main></body></html>

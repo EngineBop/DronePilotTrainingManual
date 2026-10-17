@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed BOPRC project-duration survey-control target</title>
+  <desc id="desc">Clean plan and section diagrams for a 290 millimetre square black and white survey plate, fixed at four corners and installed almost flush with finished ground on a compacted gravel pad.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f3f7f9}.card{fill:#fff;stroke:#c7d6de;stroke-width:2}.navy{fill:#123b56}.ink{fill:#18313f}.muted{fill:#607681}.blue{fill:#007ba8}.green{fill:#2e8b68}.palegreen{fill:#e2f2eb}.orange{fill:#ef6b36}.white{fill:#fff}.line{stroke:#18313f;stroke-width:3;fill:none}.leader{stroke:#607681;stroke-width:2.5;fill:none}.dim{stroke:#007ba8;stroke-width:3;fill:none}.ground{fill:#79a75c}.soil{fill:#9a7650}.t1{font:700 40px Arial,sans-serif}.t2{font:700 28px Arial,sans-serif}.body{font:23px Arial,sans-serif}.small{font:20px Arial,sans-serif}.tiny{font:17px Arial,sans-serif}.label{font:700 18px Arial,sans-serif;letter-spacing:.35px}
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#007ba8"/></marker>
+    <pattern id="gravel" width="25" height="22" patternUnits="userSpaceOnUse"><rect width="25" height="22" fill="#dfe6e8"/><circle cx="5" cy="6" r="3" fill="#89989f"/><circle cx="17" cy="14" r="4" fill="#a7b4b9"/><circle cx="24" cy="4" r="2" fill="#718188"/></pattern>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <rect class="navy" width="1600" height="112"/>
+  <text class="t1 white" x="55" y="68">Proposed BOPRC project survey-control target</text>
+  <text class="body white" x="55" y="100">290 mm plate • project-duration installation • prototype before full production</text>
+
+  <rect class="card" x="40" y="145" width="745" height="710" rx="20"/>
+  <text class="t2 ink" x="75" y="198">Plan view</text>
+  <rect x="75" y="218" width="640" height="46" rx="10" class="palegreen"/>
+  <text class="small green" x="96" y="247">Four fixing holes • exact centre clear • 60–80 mm gravel collar</text>
+  <rect x="145" y="280" width="535" height="535" rx="8" fill="url(#gravel)" stroke="#89989f" stroke-width="2"/>
+  <rect x="207" y="342" width="410" height="410" rx="6" fill="#fff" stroke="#18313f" stroke-width="4"/>
+  <path d="M207 342H412V547H207zM412 547H617V752H412z" fill="#20282d"/>
+  <path d="M412 342H617V547H412zM207 547H412V752H207z" fill="#fbfcfd"/>
+  <circle cx="412" cy="547" r="8" class="orange" stroke="#fff" stroke-width="3"/>
+  <g fill="#87969d" stroke="#18313f" stroke-width="3"><circle cx="230" cy="365" r="13"/><circle cx="594" cy="365" r="13"/><circle cx="230" cy="729" r="13"/><circle cx="594" cy="729" r="13"/></g>
+  <text class="label white" x="230" y="378">BOPRC SURVEY</text>
+  <text class="label white" x="230" y="402">CONTROL</text>
+  <text class="label ink" x="247" y="720">GCP-01</text>
+  <text class="label white" x="430" y="710">PLEASE DO NOT REMOVE</text>
+  <text class="label white" x="467" y="737">0800 884 880</text>
+  <line class="dim" x1="207" y1="310" x2="617" y2="310" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <line class="leader" x1="207" y1="324" x2="207" y2="292"/>
+  <line class="leader" x1="617" y1="324" x2="617" y2="292"/>
+  <text class="body blue" x="365" y="297">290 mm</text>
+  <line class="dim" x1="176" y1="342" x2="176" y2="752" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <line class="leader" x1="190" y1="342" x2="158" y2="342"/>
+  <line class="leader" x1="190" y1="752" x2="158" y2="752"/>
+  <text class="body blue" transform="translate(163 595) rotate(-90)">290 mm</text>
+
+  <rect class="card" x="815" y="145" width="745" height="710" rx="20"/>
+  <text class="t2 ink" x="850" y="198">Typical installation section</text>
+  <rect x="850" y="228" width="300" height="92" rx="12" fill="#edf5f8"/>
+  <text class="label blue" x="872" y="258">PLATE</text><text class="small ink" x="872" y="286">290 mm ASA prototype</text><text class="tiny muted" x="872" y="309">thickness set by print trial</text>
+  <rect x="1190" y="228" width="330" height="92" rx="12" fill="#edf5f8"/>
+  <text class="label blue" x="1212" y="258">FIXINGS</text><text class="small ink" x="1212" y="286">Four low-profile anchors</text><text class="tiny muted" x="1212" y="309">heads flush with plate surface</text>
+  <rect x="850" y="345" width="300" height="92" rx="12" fill="#f4f6f7"/>
+  <text class="label ink" x="872" y="375">PAD</text><text class="small ink" x="872" y="403">Compacted fine gravel</text><text class="tiny muted" x="872" y="426">level, drained, vegetation-free</text>
+  <rect x="1190" y="345" width="330" height="92" rx="12" fill="#f4f6f7"/>
+  <text class="label ink" x="1212" y="375">FINISHED LEVEL</text><text class="small ink" x="1212" y="403">Plate almost flush with ground</text><text class="tiny muted" x="1212" y="426">no trip, mower or vehicle hazard</text>
+
+  <path d="M855 690C980 664 1090 674 1190 690S1390 716 1520 682V810H855z" class="ground"/>
+  <path d="M930 644H1450V730H930z" fill="url(#gravel)" stroke="#89989f" stroke-width="2"/>
+  <path d="M855 690H930V730H1450V690H1520V810H855z" class="soil" opacity=".72"/>
+  <rect x="1000" y="630" width="380" height="18" rx="3" fill="#20282d" stroke="#18313f" stroke-width="2"/>
+  <path d="M1025 639V754M1355 639V754" stroke="#7d8b91" stroke-width="9"/>
+  <path d="M1010 633H1040M1340 633H1370" stroke="#dfe5e7" stroke-width="9"/>
+  <path d="M1025 754l-11-22h22zM1355 754l-11-22h22z" fill="#7d8b91"/>
+  <line x1="870" y1="648" x2="1510" y2="648" stroke="#2e8b68" stroke-width="3" stroke-dasharray="10 8"/>
+  <text class="tiny green" x="1135" y="778">weed-resistant separator where suitable</text>
+  <path class="leader" d="M1000 630V480H1015"/><path class="leader" d="M1355 630V480H1350"/><path class="leader" d="M930 675H895V480"/><path class="leader" d="M1450 648H1490V480"/>
+  <text class="tiny muted" x="994" y="468">plate</text><text class="tiny muted" x="1314" y="468">flush fixing</text><text class="tiny muted" x="850" y="468">gravel pad</text><text class="tiny muted" x="1412" y="468">finished level</text>
+  <rect x="850" y="790" width="670" height="42" rx="10" class="palegreen"/>
+  <text class="small green" x="875" y="817">Minimal excavation; protect stopbank integrity and check buried services.</text>
+</svg>

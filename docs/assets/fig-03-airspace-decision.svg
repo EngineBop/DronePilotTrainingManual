@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Part 101 airspace decision path</title><desc id="desc">Decision diagram for controlled airspace, four kilometre aerodrome zones, shielded operations and normal Part 101 controls.</desc>
+  <defs><style>.h{font:700 32px Arial;fill:#15364a}.b{font:700 20px Arial;fill:#15364a}.s{font:16px Arial;fill:#294f62}.sw{font:16px Arial;fill:white}.w{font:700 18px Arial;fill:white}.l{stroke:#7896a6;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7896a6"/></marker></defs>
+  <rect width="1200" height="720" fill="#f5f9fa"/><text x="55" y="55" class="h">Airspace decision — verify every flight</text>
+  <g transform="translate(425 85)"><rect width="350" height="80" rx="15" fill="#164e63"/><text x="42" y="48" class="w">Plot site in AirShare + current VNC</text></g>
+  <path d="M600 165V210" class="l"/>
+  <g transform="translate(425 215)"><rect width="350" height="80" rx="15" fill="white" stroke="#164e63" stroke-width="3"/><text x="53" y="48" class="b">Controlled airspace?</text></g>
+  <path d="M425 255H280" class="l"/><text x="333" y="238" class="s">YES</text><path d="M775 255H920" class="l"/><text x="820" y="238" class="s">NO</text>
+  <g transform="translate(50 215)"><rect width="230" height="115" rx="15" fill="#2563a6"/><text x="25" y="38" class="w">ATC authorisation</text><text x="25" y="70" class="sw">unless a current legal</text><text x="25" y="94" class="sw">shielded exception applies.</text></g>
+  <g transform="translate(920 215)"><rect width="230" height="115" rx="15" fill="#0f766e"/><text x="28" y="38" class="w">Class G controls</text><text x="28" y="70" class="sw">still apply: VLOS, 400 ft,</text><text x="28" y="94" class="sw">give way and permissions.</text></g>
+  <path d="M600 295V365" class="l"/>
+  <g transform="translate(390 370)"><rect width="420" height="80" rx="15" fill="white" stroke="#b85c1e" stroke-width="3"/><text x="43" y="48" class="b">Within 4 km of any aerodrome?</text></g>
+  <path d="M390 410H280" class="l"/><text x="318" y="393" class="s">YES</text><path d="M810 410H920" class="l"/><text x="845" y="393" class="s">NO</text>
+  <g transform="translate(50 375)"><rect width="230" height="170" rx="15" fill="#b85c1e"/><text x="20" y="35" class="w">Additional controls</text><text x="20" y="66" class="sw">Qualified pilot/supervision;</text><text x="20" y="89" class="sw">operator agreement if</text><text x="20" y="112" class="sw">uncontrolled; observer</text><text x="20" y="135" class="sw">required for the RPA;</text><text x="20" y="158" class="sw">ATC if controlled.</text></g>
+  <g transform="translate(920 375)"><rect width="230" height="155" rx="15" fill="#0f766e"/><text x="24" y="35" class="w">Continue checks</text><text x="24" y="68" class="sw">AIP/NOTAM, special-use</text><text x="24" y="92" class="sw">airspace, low-level aircraft,</text><text x="24" y="116" class="sw">land and people/property</text><text x="24" y="140" class="sw">consents.</text></g>
+  <rect x="190" y="585" width="820" height="78" rx="14" fill="#fff7ed" stroke="#d97706" stroke-width="3"/><text x="225" y="618" class="b">Shielded is a precise legal test, not a general “near an object” shortcut.</text><text x="225" y="645" class="s">Check CATI 101-1 and record the shielding object, distances, height and any required physical barrier.</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Six-point ground-control layout for one defined contract work site</title>
+  <desc id="desc">A short linear stopbank construction footprint sits within the confirmed contract access area. Two permanent targets are placed near each end and two near the middle, all outside earthworks and vehicle routes. Private land beyond the contract area contains no targets.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f7f8}.navy{fill:#123b56}.blue{fill:#087ca7}.blue2{fill:#d9eef6}.green{fill:#2d8c67}.green2{fill:#dff1e9}.orange{fill:#ef6c35}.orange2{fill:#f8dfd3}.red{fill:#c94040}.ink{fill:#17313f}.muted{fill:#5f7380}.white{fill:#fff}.line{stroke:#17313f;stroke-width:3;fill:none}.dash{stroke:#087ca7;stroke-width:4;stroke-dasharray:12 10;fill:none}.fence{stroke:#788890;stroke-width:4;stroke-dasharray:4 14;fill:none}.t1{font:700 42px Arial,sans-serif}.t2{font:700 28px Arial,sans-serif}.body{font:24px Arial,sans-serif}.small{font:20px Arial,sans-serif}.label{font:700 19px Arial,sans-serif}.tiny{font:17px Arial,sans-serif}
+    </style>
+    <pattern id="private" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="18" height="18" fill="#edf0f1"/><line x1="0" y1="0" x2="0" y2="18" stroke="#d3dade" stroke-width="6"/></pattern>
+    <g id="gcp"><circle r="27" fill="#fff" stroke="#087ca7" stroke-width="6"/><path d="M-18-18H0V0H-18zM0 0H18V18H0z" fill="#17313f"/><path d="M0-18H18V0H0zM-18 0H0V18H-18z" fill="#fff"/></g>
+    <g id="no"><circle r="24" fill="#fff" stroke="#c94040" stroke-width="5"/><path d="M-12-12L12 12M12-12L-12 12" stroke="#c94040" stroke-width="7" stroke-linecap="round"/></g>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <rect class="navy" width="1600" height="120"/>
+  <text class="t1 white" x="55" y="68">Keep six points close to one defined work site</text>
+  <text class="body white" x="55" y="103">Two near each end + two near the middle • all inside the contract-access area</text>
+
+  <rect x="45" y="150" width="1120" height="700" rx="22" fill="url(#private)" stroke="#c9d4d9" stroke-width="2"/>
+  <text class="label muted" x="70" y="190">PRIVATE / UNAUTHORISED LAND — NO TARGETS</text>
+  <text class="label muted" x="70" y="825">PRIVATE / UNAUTHORISED LAND — NO TARGETS</text>
+
+  <!-- authorised project corridor -->
+  <path d="M110 350C310 260 470 280 640 350S930 470 1095 380L1095 665C900 735 710 625 560 570S285 500 110 610Z" class="blue2" stroke="#087ca7" stroke-width="5"/>
+  <rect x="300" y="622" width="280" height="40" rx="10" fill="#ffffff" opacity=".88"/>
+  <text class="label blue" x="320" y="648">CONTRACT ACCESS / CONTROL AREA</text>
+
+  <!-- work footprint and haul route -->
+  <path d="M165 432C340 355 480 380 642 445S892 535 1035 466L1035 570C880 630 720 555 575 500S330 430 165 520Z" class="orange2" stroke="#ef6c35" stroke-width="4"/>
+  <text class="label orange" x="430" y="420">STOPBANK WORKS / FUTURE FOOTPRINT</text>
+  <path d="M165 478C335 405 480 430 630 488S890 582 1035 515" stroke="#8d9aa0" stroke-width="26" fill="none"/>
+  <path d="M165 478C335 405 480 430 630 488S890 582 1035 515" stroke="#fff" stroke-width="3" stroke-dasharray="16 12" fill="none"/>
+  <text class="tiny ink" x="740" y="580">haul / vehicle route</text>
+
+  <!-- GCP pairs -->
+  <g transform="translate(190 380)"><use href="#gcp"/><text class="label ink" x="38" y="7">GCP-01</text></g>
+  <g transform="translate(230 575)"><use href="#gcp"/><text class="label ink" x="38" y="7">GCP-02</text></g>
+  <g transform="translate(590 372)"><use href="#gcp"/><text class="label ink" x="38" y="7">GCP-03</text></g>
+  <g transform="translate(620 602)"><use href="#gcp"/><text class="label ink" x="38" y="7">GCP-04</text></g>
+  <g transform="translate(990 404)"><use href="#gcp"/><text class="label ink" x="-122" y="-38">GCP-05</text></g>
+  <g transform="translate(1035 625)"><use href="#gcp"/><text class="label ink" x="-122" y="-38">GCP-06</text></g>
+
+  <!-- fence and rejected positions -->
+  <path class="fence" d="M75 285H1115M75 740H1115"/>
+  <g transform="translate(340 235)"><use href="#no"/><text class="small red" x="38" y="7">not in a neighbouring paddock</text></g>
+  <g transform="translate(820 780)"><use href="#no"/><text class="small red" x="38" y="7">not beyond the access boundary</text></g>
+
+  <!-- teaching panel -->
+  <rect x="1195" y="150" width="360" height="700" rx="22" fill="#fff" stroke="#c9d4d9" stroke-width="2"/>
+  <text class="t2 ink" x="1230" y="205">Before fixing a plate</text>
+  <circle cx="1240" cy="262" r="17" class="blue"/><text class="label white" x="1234" y="269">1</text><text class="small ink" x="1270" y="255">Confirm ownership, easement</text><text class="small ink" x="1270" y="282">and project access.</text>
+  <circle cx="1240" cy="350" r="17" class="blue"/><text class="label white" x="1234" y="357">2</text><text class="small ink" x="1270" y="343">Mark both ends, the middle,</text><text class="small ink" x="1270" y="370">future work and vehicle areas.</text>
+  <circle cx="1240" cy="438" r="17" class="blue"/><text class="label white" x="1234" y="445">3</text><text class="small ink" x="1270" y="431">Select stable locations inside</text><text class="small ink" x="1270" y="458">the authorised corridor.</text>
+  <circle cx="1240" cy="526" r="17" class="blue"/><text class="label white" x="1234" y="533">4</text><text class="small ink" x="1270" y="519">Check visibility, safe access,</text><text class="small ink" x="1270" y="546">services and flood/erosion risk.</text>
+  <circle cx="1240" cy="614" r="17" class="green"/><text class="label white" x="1234" y="621">5</text><text class="small ink" x="1270" y="607">Install, survey the exact centre</text><text class="small ink" x="1270" y="634">and record the point.</text>
+  <rect x="1225" y="700" width="300" height="105" rx="12" class="green2"/>
+  <text class="label green" x="1248" y="738">If the corridor cannot provide</text>
+  <text class="small green" x="1248" y="768">sound geometry, redesign the</text>
+  <text class="small green" x="1248" y="794">network or arrange access.</text>
+</svg>

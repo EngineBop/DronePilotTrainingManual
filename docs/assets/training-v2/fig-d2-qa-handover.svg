@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Quality assurance and handover workflow</title>
+  <desc id="desc">A practical sequence to check position, surface, outputs and intended use before releasing drone survey data.</desc>
+  <defs><style>.h{font:700 34px Arial;fill:#15364a}.s{font:18px Arial;fill:#234b5f}.k{font:700 20px Arial;fill:#15364a}.t{font:16px Arial;fill:#234b5f}.n{font:700 18px Arial;fill:white}.q{font:700 18px Arial;fill:#b54708}.a{stroke:#7b98a7;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7b98a7"/></marker></defs>
+  <rect width="1200" height="560" fill="#f5f9fa"/>
+  <text x="60" y="64" class="h">Check the result before release</text>
+  <text x="60" y="98" class="s">A sharp-looking map is not enough. Acceptance is for a stated purpose.</text>
+
+  <circle cx="130" cy="245" r="52" fill="#164e63"/><text x="123" y="252" class="n">1</text>
+  <text x="76" y="330" class="k">Position</text><text x="58" y="362" class="t">GCP marks</text><text x="58" y="388" class="t">Checkpoints</text>
+  <path d="M188 245H280" class="a"/>
+
+  <circle cx="350" cy="245" r="52" fill="#0f8277"/><text x="343" y="252" class="n">2</text>
+  <text x="304" y="330" class="k">Surface</text><text x="280" y="362" class="t">Coverage + edges</text><text x="280" y="388" class="t">Water + vegetation</text>
+  <path d="M408 245H500" class="a"/>
+
+  <circle cx="570" cy="245" r="52" fill="#2b6cb0"/><text x="563" y="252" class="n">3</text>
+  <text x="523" y="330" class="k">Outputs</text><text x="500" y="362" class="t">CRS + height</text><text x="500" y="388" class="t">Formats + units</text>
+  <path d="M628 245H720" class="a"/>
+
+  <circle cx="790" cy="245" r="52" fill="#c45a17"/><text x="783" y="252" class="n">4</text>
+  <text x="756" y="330" class="k">Use</text><text x="720" y="362" class="t">Purpose + tolerance</text><text x="720" y="388" class="t">Limits stated</text>
+  <path d="M848 245H940" class="a"/>
+
+  <rect x="945" y="185" width="200" height="120" rx="20" fill="#15364a"/>
+  <text x="985" y="233" style="font:700 22px Arial;fill:white">5  Release</text>
+  <text x="977" y="270" style="font:16px Arial;fill:white">Checked deliverables</text>
+  <text x="977" y="294" style="font:16px Arial;fill:white">with QA record</text>
+
+  <rect x="180" y="454" width="840" height="62" rx="14" fill="#fff7ed" stroke="#d97706" stroke-width="3"/>
+  <text x="298" y="493" class="q">State what was checked, what passed and what the data is suitable for.</text>
+</svg>

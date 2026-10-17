@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Repeat construction mission coverage</title>
+  <desc id="desc">A conceptual plan showing an authorised project corridor, work and establishment areas, six control points, and a flight capture margin that remains inside authorised access.</desc>
+  <defs>
+    <pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="16" stroke="#d4e0e5" stroke-width="5"/></pattern>
+    <style>.h{font:700 32px Arial;fill:#15364a}.s{font:17px Arial;fill:#36596b}.k{font:700 17px Arial;fill:#15364a}.t{font:15px Arial;fill:#36596b}.w{font:700 15px Arial;fill:white}.g{font:700 14px Arial;fill:#087f5b}</style>
+  </defs>
+  <rect width="1200" height="700" fill="#f5f9fa"/>
+  <text x="48" y="54" class="h">Plan the repeat route around the whole project</text>
+  <text x="48" y="84" class="s">Conceptual example — final access, control and mission boundary require field verification.</text>
+  <rect x="45" y="112" width="880" height="520" rx="20" fill="url(#hatch)" stroke="#c8d8df" stroke-width="2"/>
+  <text x="70" y="144" class="k">PRIVATE / UNAUTHORISED LAND — NO ROUTE</text>
+  <path d="M104 250 C260 145 430 190 560 235 C690 280 790 210 870 255 L870 515 C710 585 560 520 430 485 C285 445 185 545 104 505 Z" fill="#dff2f7" stroke="#087da9" stroke-width="4"/>
+  <text x="290" y="558" class="k">CONFIRMED PROJECT ACCESS / CONTRACT CORRIDOR</text>
+  <path d="M145 275 C290 205 420 235 545 278 C670 320 765 265 830 292 L830 480 C700 525 580 480 445 447 C310 414 220 485 145 462 Z" fill="none" stroke="#159b66" stroke-width="5" stroke-dasharray="12 9"/>
+  <path d="M198 325 C330 275 447 312 558 344 C659 375 725 338 790 356 L790 422 C690 448 608 421 510 396 C400 368 307 401 198 430 Z" fill="#ffe0d1" stroke="#f26b38" stroke-width="3"/>
+  <text x="390" y="372" style="font:700 18px Arial;fill:#d94f20">CONSTRUCTION FOOTPRINT</text>
+  <path d="M214 340 C352 300 464 335 570 366 C664 393 723 365 774 380" fill="none" stroke="#7d8d96" stroke-width="34"/>
+  <path d="M214 340 C352 300 464 335 570 366 C664 393 723 365 774 380" fill="none" stroke="white" stroke-width="3" stroke-dasharray="12 11"/>
+  <rect x="310" y="242" width="130" height="56" rx="9" fill="#edf1f3" stroke="#738b98" stroke-width="2"/>
+  <text x="329" y="266" class="k">Establishment</text><text x="340" y="286" class="t">office + parking</text>
+  <rect x="615" y="420" width="126" height="50" rx="9" fill="#edf1f3" stroke="#738b98" stroke-width="2"/>
+  <text x="640" y="450" class="k">Laydown</text>
+  <g fill="white" stroke="#087da9" stroke-width="4">
+    <circle cx="175" cy="274" r="23"/><circle cx="180" cy="475" r="23"/>
+    <circle cx="500" cy="274" r="23"/><circle cx="500" cy="458" r="23"/>
+    <circle cx="808" cy="310" r="23"/><circle cx="805" cy="452" r="23"/>
+  </g>
+  <g fill="#15364a"><path d="M160 259h15v15h-15zm15 15h15v15h-15z"/><path d="M165 460h15v15h-15zm15 15h15v15h-15z"/><path d="M485 259h15v15h-15zm15 15h15v15h-15z"/><path d="M485 443h15v15h-15zm15 15h15v15h-15z"/><path d="M793 295h15v15h-15zm15 15h15v15h-15z"/><path d="M790 437h15v15h-15zm15 15h15v15h-15z"/></g>
+  <g class="k"><text x="144" y="238">GCP-01</text><text x="144" y="440">GCP-02</text><text x="466" y="236">GCP-03</text><text x="466" y="422">GCP-04</text><text x="773" y="270">GCP-05</text><text x="770" y="412">GCP-06</text></g>
+  <g transform="translate(955 140)">
+    <rect width="205" height="450" rx="18" fill="white" stroke="#c8d8df" stroke-width="2"/>
+    <text x="25" y="42" class="k">Capture must include</text>
+    <g class="t"><text x="25" y="82">✓ work footprint</text><text x="25" y="113">✓ establishment</text><text x="25" y="144">✓ haul / plant areas</text><text x="25" y="175">✓ laydown + parking</text><text x="25" y="206">✓ occupied land</text><text x="25" y="237">✓ every control point</text><text x="25" y="268">✓ useful edge margin</text></g>
+    <line x1="25" y1="294" x2="180" y2="294" stroke="#d3e0e5" stroke-width="2"/>
+    <text x="25" y="330" class="k">Repeat visit</text>
+    <text x="25" y="362" class="t">Open the saved route.</text><text x="25" y="388" class="t">Recheck site + approvals.</text><text x="25" y="414" class="t">Revise only when needed.</text>
+  </g>
+  <text x="65" y="667" class="s">Save the pre-construction route as the baseline. Reuse it only after current airspace, access, obstacles and work activity have been checked.</text>
+</svg>

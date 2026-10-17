@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Routing verified drone source data to processing and media outputs</title>
+  <desc id="desc">Three branches route mapping and LiDAR data to DJI Terra, Photospheres to DroneDeploy, and video and oblique photographs to the BOPRC archive and approved viewers.</desc>
+  <defs><style>.h{font:700 31px Arial;fill:#15364a}.s{font:17px Arial;fill:#36596b}.k{font:700 18px Arial;fill:#15364a}.t{font:15px Arial;fill:#36596b}.w{font:700 18px Arial;fill:white}.a{stroke:#7797a6;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7797a6"/></marker></defs>
+  <rect width="1200" height="560" fill="#f5f9fa"/>
+  <text x="50" y="55" class="h">One verified source copy — three processing paths</text>
+  <text x="50" y="88" class="s">Keep the original files and metadata. Publish derivatives without replacing the archive master.</text>
+  <rect x="50" y="208" width="215" height="118" rx="18" fill="#164e63"/>
+  <text x="82" y="252" class="w">Verified source</text><text x="82" y="282" style="font:15px Arial;fill:white">Survey / Event ID</text><text x="82" y="307" style="font:15px Arial;fill:white">Primary + backup copy</text>
+  <path d="M270 260H340" class="a"/><path d="M300 260V150H340" class="a"/><path d="M300 260V390H340" class="a"/>
+  <rect x="350" y="105" width="270" height="110" rx="16" fill="white" stroke="#b9cfd8" stroke-width="3"/>
+  <text x="375" y="142" class="k">Mapping images + L2 data</text><text x="375" y="170" class="t">DJI Terra → ArcGIS Pro / Civil 3D</text><text x="375" y="195" class="t">Report + checkpoints retained</text>
+  <rect x="350" y="225" width="270" height="110" rx="16" fill="#e3f5ee" stroke="#34a37a" stroke-width="3"/>
+  <text x="375" y="262" class="k">Photosphere source</text><text x="375" y="290" class="t">DroneDeploy pano → check + locate</text><text x="375" y="315" class="t">Retain source + durable reference</text>
+  <rect x="350" y="345" width="270" height="110" rx="16" fill="#fff0e8" stroke="#f26b38" stroke-width="3"/>
+  <text x="375" y="382" class="k">Video + oblique photographs</text><text x="375" y="410" class="t">Archive master → approved derivative</text><text x="375" y="435" class="t">Record site, time and view direction</text>
+  <path d="M630 160H705" class="a"/><path d="M630 280H705" class="a"/><path d="M630 400H705" class="a"/>
+  <rect x="715" y="105" width="430" height="350" rx="18" fill="white" stroke="#c7d7de" stroke-width="2"/>
+  <text x="745" y="145" class="k">Metadata connects every output</text>
+  <g class="t"><text x="745" y="183">• Survey / Event ID</text><text x="745" y="214">• project, site, date and pilot</text><text x="745" y="245">• capture purpose and coverage</text><text x="745" y="276">• archive master location</text><text x="745" y="307">• processing / published reference</text><text x="745" y="338">• access and privacy restrictions</text><text x="745" y="369">• limitations and accepted use</text></g>
+  <rect x="745" y="393" width="370" height="42" rx="10" fill="#e3f5ee"/>
+  <text x="778" y="420" style="font:700 16px Arial;fill:#087f5b">A share link is not the archive.</text>
+  <text x="50" y="515" class="s">The future Flood Media Viewer may provide access to approved copies; BOPRC-managed storage remains the record source.</text>
+</svg>

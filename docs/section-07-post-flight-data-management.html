@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>7. Post-flight data management | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a class="active" href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>7. Post-flight data management</h1>
+<h2>7.1 Check before packing up</h2>
+<p>Do not leave simply because the aircraft landed successfully.</p>
+<ul>
+<li><input disabled="" type="checkbox"> confirm the planned area was covered and the mission completed;</li>
+<li><input disabled="" type="checkbox"> check the image count or LiDAR mission folders is reasonable;</li>
+<li><input disabled="" type="checkbox"> open sample photographs and check focus, exposure, blur and target visibility;</li>
+<li><input disabled="" type="checkbox"> confirm RTK/positioning and trajectory indicators are consistent with the flight record;</li>
+<li><input disabled="" type="checkbox"> confirm the surveyed control/checkpoint file is available or know who will supply it;</li>
+<li><input disabled="" type="checkbox"> note paused lines, battery changes, warnings, unexpected landings or missing areas; and</li>
+<li><input disabled="" type="checkbox"> complete a safe re-flight while the site is still controlled when a clear gap can be corrected;</li>
+<li><input disabled="" type="checkbox"> complete the site sign-out and tell the site manager/project contact that flying is finished and whether field coverage passed;</li>
+<li><input disabled="" type="checkbox"> remove or close any temporary exclusion/control arrangement; and</li>
+<li><input disabled="" type="checkbox"> confirm no equipment, batteries, markers or waste have been left behind.</li>
+</ul>
+<p>The field check does not prove accuracy. It confirms the expected data appears to be present and usable enough to process.</p>
+<p>Arrival and departure notification are both a health-and-safety control and professional courtesy. Site personnel need to know when the drone operation and its temporary controls have ended.</p>
+<table>
+<thead>
+<tr>
+<th>Matrice 4E photogrammetry</th>
+<th>M350 RTK + Zenmuse L2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Original images with metadata unchanged</td>
+<td>Complete L2 mission folder and original file structure</td>
+</tr>
+<tr>
+<td>Flight/controller record and mission settings</td>
+<td>Flight record, trajectory/positioning data and payload settings</td>
+</tr>
+<tr>
+<td>Mission boundary and interruption notes</td>
+<td>Mission lines, calibration segments and warnings</td>
+</tr>
+<tr>
+<td>GCP/checkpoint file and target photographs</td>
+<td>Control/checkpoint file and target photographs</td>
+</tr>
+</tbody></table>
+<h2>7.2 Protect and organise the source</h2>
+<p>Use the memory card as the transfer source — not as the only copy and not as the working drive.</p>
+<p><img src="assets/training-v2/fig-b1-field-to-project.svg" alt="From aircraft to protected project data"></p>
+<p><em>Figure 16. Check the data, create a primary project copy and a backup, then process a separate working copy.</em></p>
+<ol>
+<li>Copy the complete mission folder to the approved BOPRC project location.</li>
+<li>Compare the card and copy: folder names, file count and total size; then open sample files.</li>
+<li>Create a second verified copy in the approved backup location.</li>
+<li>Record who copied the data, the date, aircraft/mission and any known issue.</li>
+<li>Keep the source card unchanged until both copies are checked and the dataset is complete.</li>
+<li>Process from a working copy, not the card or the only retained original.</li>
+</ol>
+<p>If files are missing or the card reports an error, stop. Do not format it or run recovery software without involving the technical lead.</p>
+<p><strong>Proposed BOPRC survey package — confirm the authoritative storage location and retention rules before issue:</strong></p>
+<pre><code class="language-text">SurveyID_YYYY-MM-DD_Site
+├── 01_Raw_Flight
+├── 02_Control_and_Checkpoints
+├── 03_Terra_Project
+├── 04_Final_Outputs
+└── 05_QA_and_Metadata
+    ├── SurveyID_Terra_Quality_Report.pdf
+    ├── SurveyID_Checkpoint_Residuals.csv
+    ├── SurveyID_Final_Surface_Check.csv
+    └── SurveyID_QA_Metadata.pdf
+</code></pre>
+<p>Keep the raw files untouched. Put only checked, released products in <code>04_Final_Outputs</code>. The Terra PDF remains a normal preserved file beside the <code>.gdb</code> and output files—not only inside a processing computer or geodatabase. Use the same stable Survey ID in filenames and ArcGIS metadata. Prefer a relative package path or managed document reference over a drive-letter path that may break when data moves.</p>
+<h2>7.3 Coordinate and height record</h2>
+<p>For normal BOPRC engineering work, use <strong>NZTM2000 / NZGD2000 (EPSG:2193)</strong> and <strong>NZVD2016 (EPSG:7839)</strong> unless the project specifies and records another system.</p>
+<p>Before processing, confirm:</p>
+<ul>
+<li>horizontal coordinate system and units;</li>
+<li>vertical datum or height system and units;</li>
+<li>whether heights are NZVD2016 orthometric or GNSS ellipsoidal;</li>
+<li>the geoid/transformation used; and</li>
+<li>the order of Easting, Northing and Height fields.</li>
+</ul>
+<p>If the coordinate or height setup cannot be understood and independently checked, stop and ask the survey/technical lead.</p>
+<h2>7.4 Media outputs and DroneDeploy</h2>
+<p>After the source copy is verified, route each product to the appropriate workflow.</p>
+<p><img src="assets/training-v2/fig-c1-output-routing.svg" alt="Drone output routing"></p>
+<p><em>Figure 17. Survey data, Photospheres and record media follow different processing paths but remain connected by one Survey/Event ID.</em></p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Archive master</th>
+<th>Working or published copy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Video</strong></td>
+<td>Untouched video and associated telemetry/subtitle file where produced.</td>
+<td>Named derivative for meetings, communications or the future Flood Media Viewer. Never edit over the master.</td>
+</tr>
+<tr>
+<td><strong>Oblique photographs</strong></td>
+<td>Original files with EXIF/location metadata and enough sequence context to understand the view.</td>
+<td>Approved smaller copy or viewer item, with event/site, time and direction recorded.</td>
+</tr>
+<tr>
+<td><strong>Photosphere</strong></td>
+<td>Original source images and DJI stitched panorama.</td>
+<td>Checked DroneDeploy panorama and durable project reference where that platform remains approved.</td>
+</tr>
+</tbody></table>
+<p>For DroneDeploy, use the correct project and capture date, upload the panorama through the current media upload workflow, check the stitch and mapped location, name it with the Event/Survey ID, and record the hosted reference. Confirm access/privacy settings. DroneDeploy storage or a public share link does not replace BOPRC-managed retention.</p>
+<p>Flood photographs, oblique views, video and Photospheres are intended to feed the planned <strong>Flood Media Viewer</strong>. Until that workflow is operational and approved, record the archive location and do not imply that viewer publication has occurred.</p>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-06-mission-planning-and-capture.html">← Previous</a><a class="button" href="section-08-dji-terra-processing-and-control.html">Next →</a></nav></article></main></body></html>

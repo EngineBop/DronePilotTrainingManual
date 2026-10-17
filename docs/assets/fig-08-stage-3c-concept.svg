@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual Stage 3C construction survey control layout</title><desc id="desc">A clearly conceptual oblique site plan showing river, stopbank construction corridor, six permanent ground control points, three independent checkpoints, launch area, workers and no-fly buffers.</desc>
+  <defs><style>.h{font:700 30px Arial;fill:white}.b{font:700 20px Arial;fill:#15364a}.s{font:16px Arial;fill:#315568}.g{font:700 16px Arial;fill:white}.c{font:700 15px Arial;fill:#78350f}.dash{stroke:#b85c1e;stroke-width:4;stroke-dasharray:13 9;fill:none}</style></defs>
+  <rect width="1400" height="820" fill="#dfe9d9"/><path d="M0 75C210 5 360 150 565 88S920 10 1400 85V270C1110 225 950 310 710 240S280 245 0 310Z" fill="#72b9d1"/>
+  <path d="M0 330C260 265 475 350 700 315S1060 260 1400 330" fill="none" stroke="#7b6a54" stroke-width="48"/><path d="M0 330C260 265 475 350 700 315S1060 260 1400 330" fill="none" stroke="#c8b392" stroke-width="32"/>
+  <path d="M80 610C300 490 430 545 655 485S1030 410 1320 535" fill="none" stroke="#e7cf9c" stroke-width="120"/><path d="M80 610C300 490 430 545 655 485S1030 410 1320 535" class="dash"/>
+  <rect x="0" y="0" width="1400" height="72" fill="#15364a"/><text x="42" y="46" class="h">STAGE 3C CONCEPT — illustrative only; not real imagery or surveyed coordinates</text>
+  <g fill="#164e63" stroke="white" stroke-width="4"><circle cx="135" cy="620" r="24"/><circle cx="330" cy="530" r="24"/><circle cx="555" cy="505" r="24"/><circle cx="800" cy="455" r="24"/><circle cx="1050" cy="465" r="24"/><circle cx="1285" cy="540" r="24"/></g>
+  <g class="g" text-anchor="middle"><text x="135" y="626">G1</text><text x="330" y="536">G2</text><text x="555" y="511">G3</text><text x="800" y="461">G4</text><text x="1050" y="471">G5</text><text x="1285" y="546">G6</text></g>
+  <g fill="#f5c451" stroke="#78350f" stroke-width="4"><rect x="420" y="545" width="30" height="30" transform="rotate(45 435 560)"/><rect x="720" y="540" width="30" height="30" transform="rotate(45 735 555)"/><rect x="1120" y="520" width="30" height="30" transform="rotate(45 1135 535)"/></g>
+  <g class="c"><text x="400" y="600">CP1</text><text x="705" y="600">CP2</text><text x="1112" y="585">CP3</text></g>
+  <rect x="102" y="690" width="180" height="75" rx="12" fill="#0f766e"/><text x="125" y="720" class="g">LAUNCH / LAND</text><text x="125" y="748" class="g">controlled area</text>
+  <rect x="890" y="590" width="210" height="85" rx="12" fill="#fff7ed" stroke="#b85c1e" stroke-width="3"/><text x="915" y="622" class="b">Active works</text><text x="915" y="649" class="s">plant + workers:</text><text x="915" y="670" class="s">coordinate / pause</text>
+  <path d="M875 400l65-80 65 80z" fill="#f0a243" stroke="#78350f" stroke-width="3"/><text x="940" y="356" class="b" text-anchor="middle">TREE</text>
+  <path d="M1040 285h215v95h-215z" fill="none" stroke="#b54708" stroke-width="4" stroke-dasharray="10 8"/><text x="1070" y="320" class="b">NO-FLY BUFFER</text><text x="1064" y="348" class="s">public access / works</text>
+  <rect x="1070" y="705" width="285" height="70" rx="12" fill="white" opacity=".92"/><circle cx="1100" cy="730" r="12" fill="#164e63"/><text x="1125" y="736" class="s">GCP used in adjustment</text><rect x="1089" y="751" width="22" height="22" transform="rotate(45 1100 762)" fill="#f5c451" stroke="#78350f" stroke-width="2"/><text x="1125" y="768" class="s">Independent checkpoint</text>
+</svg>

@@ -11,6 +11,7 @@ This is the practical training manual and field reference for BOPRC's engineerin
 ## Downloads
 
 - [Open the professional web edition](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site)
+- [Take the no-login practice theory test](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/theory-test.html)
 - [Printable PDF manual](https://boprc-drone-operations-manual.lissanddanvan.chatgpt.site/downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf)
 - [DJI Terra ground-control-point CSV template](templates/dji-terra-ground-control-points.csv)
 - [DJI Terra independent-checkpoint CSV template](templates/dji-terra-independent-checkpoints.csv)
@@ -985,6 +986,5 @@ Retain the raw source, Terra project, GIS processing history, QA record and rele
 - complete final technical and aviation review against the current controlled documents.
 
 **Internal controlled documents remain authoritative:** *Drones at Toi Moana — Technical Reference and Source Document*, *2023-06 JSA Engineering Team — Projects Team (FINAL)* and *BOPRC Safe Job Procedure template V4*.
-
 
 

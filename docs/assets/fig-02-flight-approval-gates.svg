@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Six stages before launch</title><desc id="desc">A six-stage workflow from purpose and pilot readiness through airspace, land, safety and final go-no-go.</desc>
+  <defs><style>.h{font:700 32px Arial;fill:#15364a}.k{font:700 21px Arial;fill:white}.s{font:17px Arial;fill:#234b5f}.sw{font:17px Arial;fill:white}.q{font:700 17px Arial;fill:#b54708}.a{stroke:#7b98a7;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7b98a7"/></marker></defs>
+  <rect width="1200" height="660" fill="#f5f9fa"/><text x="65" y="60" class="h">Six stages before launch</text>
+  <g transform="translate(65 105)"><rect width="300" height="120" rx="16" fill="#164e63"/><text x="24" y="42" class="k">1  Purpose + output</text><text x="24" y="76" class="sw">Define the decision, product,</text><text x="24" y="100" class="sw">accuracy and privacy needs.</text></g>
+  <path d="M370 165H445" class="a"/>
+  <g transform="translate(450 105)"><rect width="300" height="120" rx="16" fill="#0f766e"/><text x="24" y="42" class="k">2  Pilot + aircraft</text><text x="24" y="76" class="sw">Pilot ready and competent;</text><text x="24" y="100" class="sw">aircraft and payload serviceable.</text></g>
+  <path d="M755 165H830" class="a"/>
+  <g transform="translate(835 105)"><rect width="300" height="120" rx="16" fill="#2563a6"/><text x="24" y="42" class="k">3  Airspace + aerodrome</text><text x="24" y="76" class="sw">AirShare, VNC/AIP, IFIS NOTAM,</text><text x="24" y="100" class="sw">ATC or operator permission.</text></g>
+  <path d="M985 230V300" class="a"/>
+  <g transform="translate(835 305)"><rect width="300" height="120" rx="16" fill="#2563a6"/><text x="24" y="42" class="k">4  Land + activity</text><text x="24" y="76" class="sw">Owner/occupier, council, DOC,</text><text x="24" y="100" class="sw">NZTA and site coordination.</text></g>
+  <path d="M830 365H755" class="a"/>
+  <g transform="translate(450 305)"><rect width="300" height="120" rx="16" fill="#b85c1e"/><text x="24" y="42" class="k">5  Risk controls</text><text x="24" y="76" class="sw">SJP/JSA, weather, people,</text><text x="24" y="100" class="sw">animals, water and recovery.</text></g>
+  <path d="M445 365H370" class="a"/>
+  <g transform="translate(65 305)"><rect width="300" height="120" rx="16" fill="#164e63"/><text x="24" y="42" class="k">6  Field go / no-go</text><text x="24" y="76" class="sw">Pilot verifies conditions, crew,</text><text x="24" y="100" class="sw">permissions and abort triggers.</text></g>
+  <rect x="65" y="495" width="1070" height="100" rx="15" fill="#fff7ed" stroke="#d97706" stroke-width="3"/>
+  <text x="95" y="535" class="q">STOP if any stage is incomplete.</text><text x="95" y="568" class="s">Logging a flight in AirShare does not replace landowner consent, aerodrome agreement, ATC authorisation or the pilot’s safety decision.</text>
+</svg>

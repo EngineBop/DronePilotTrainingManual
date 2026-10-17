@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified DJI Terra project setup and quality workflow</title>
+  <desc id="desc">Six numbered cards show project creation, data import, reference system setup, control role assignment, marking and optimisation, and quality report export.</desc>
+  <defs><style>.h{font:700 31px Arial;fill:#15364a}.s{font:17px Arial;fill:#36596b}.n{font:700 22px Arial;fill:white}.k{font:700 18px Arial;fill:#15364a}.t{font:15px Arial;fill:#36596b}.a{stroke:#7897a5;stroke-width:4;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#7897a5"/></marker></defs>
+  <rect width="1200" height="640" fill="#f5f9fa"/>
+  <text x="50" y="55" class="h">DJI Terra — project to quality record</text>
+  <text x="50" y="87" class="s">Simplified interface guide. Menu wording can change; use the help that matches the installed Terra version.</text>
+  <g transform="translate(55 135)">
+    <rect width="300" height="170" rx="18" fill="white" stroke="#bdd0d8" stroke-width="3"/><circle cx="34" cy="35" r="22" fill="#167daa"/><text x="27" y="43" class="n">1</text><text x="70" y="42" class="k">Create the project</text><rect x="25" y="67" width="250" height="72" rx="8" fill="#edf4f7"/><rect x="42" y="83" width="88" height="40" rx="6" fill="#164e63"/><text x="53" y="108" style="font:700 13px Arial;fill:white">Visible light</text><rect x="145" y="83" width="85" height="40" rx="6" fill="#0f8277"/><text x="169" y="108" style="font:700 13px Arial;fill:white">LiDAR</text><text x="25" y="158" class="t">Record project and Terra version.</text>
+  </g>
+  <path d="M365 220H420" class="a"/>
+  <g transform="translate(430 135)">
+    <rect width="300" height="170" rx="18" fill="white" stroke="#bdd0d8" stroke-width="3"/><circle cx="34" cy="35" r="22" fill="#167daa"/><text x="27" y="43" class="n">2</text><text x="70" y="42" class="k">Add the complete source</text><rect x="28" y="70" width="244" height="58" rx="8" fill="#edf4f7"/><path d="M55 104h55l13-18h90v35H55z" fill="#f1b44c"/><text x="25" y="158" class="t">Images or supported L2 mission folder.</text>
+  </g>
+  <path d="M740 220H795" class="a"/>
+  <g transform="translate(805 135)">
+    <rect width="300" height="170" rx="18" fill="white" stroke="#bdd0d8" stroke-width="3"/><circle cx="34" cy="35" r="22" fill="#167daa"/><text x="27" y="43" class="n">3</text><text x="70" y="42" class="k">Set the reference</text><rect x="28" y="70" width="244" height="58" rx="8" fill="#edf4f7"/><text x="48" y="94" style="font:700 14px Arial;fill:#15364a">NZTM2000 / NZGD2000</text><text x="70" y="118" style="font:700 14px Arial;fill:#0f8277">NZVD2016 heights</text><text x="25" y="158" class="t">Confirm units and height handling.</text>
+  </g>
+  <path d="M955 315V355" class="a"/>
+  <g transform="translate(805 370)">
+    <rect width="300" height="170" rx="18" fill="white" stroke="#bdd0d8" stroke-width="3"/><circle cx="34" cy="35" r="22" fill="#0f8277"/><text x="27" y="43" class="n">4</text><text x="70" y="42" class="k">Assign control roles</text><rect x="28" y="70" width="110" height="58" rx="8" fill="#dff2f7"/><text x="59" y="96" class="k">GCP</text><text x="40" y="117" class="t">adjusts model</text><rect x="154" y="70" width="118" height="58" rx="8" fill="#e3f5ee"/><text x="166" y="96" class="k">Checkpoint</text><text x="171" y="117" class="t">tests result</text><text x="25" y="158" class="t">Import E, N, Z and survey accuracy.</text>
+  </g>
+  <path d="M795 455H740" class="a"/>
+  <g transform="translate(430 370)">
+    <rect width="300" height="170" rx="18" fill="white" stroke="#bdd0d8" stroke-width="3"/><circle cx="34" cy="35" r="22" fill="#0f8277"/><text x="27" y="43" class="n">5</text><text x="70" y="42" class="k">Mark and optimise</text><rect x="28" y="70" width="244" height="58" rx="8" fill="#edf4f7"/><circle cx="150" cy="99" r="20" fill="none" stroke="#f26b38" stroke-width="3"/><path d="M150 72v54M123 99h54" stroke="#f26b38" stroke-width="2"/><text x="25" y="158" class="t">Mark exact centres; keep checks withheld.</text>
+  </g>
+  <path d="M420 455H365" class="a"/>
+  <g transform="translate(55 370)">
+    <rect width="300" height="170" rx="18" fill="#164e63"/><circle cx="34" cy="35" r="22" fill="#f26b38"/><text x="27" y="43" class="n">6</text><text x="70" y="42" style="font:700 18px Arial;fill:white">Review + export report</text><rect x="30" y="70" width="240" height="58" rx="8" fill="white"/><path d="M58 83h58v34H58z" fill="#edf4f7" stroke="#9db5c0"/><path d="M135 90h103M135 102h90M135 114h70" stroke="#7897a5" stroke-width="3"/><text x="25" y="158" style="font:15px Arial;fill:white">Retain PDF, residuals and QA decision.</text>
+  </g>
+  <text x="55" y="595" class="s">Conceptual interface illustration based on current DJI guidance — not a substitute for the installed version's help.</text>
+</svg>

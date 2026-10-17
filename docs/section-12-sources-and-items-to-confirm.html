@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>12. Sources and items to confirm | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a class="active" href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>12. Sources and items to confirm</h1>
+<h2>12.1 Official quick references</h2>
+<p>“Last checked” records when the source was reviewed. It does not freeze the information.</p>
+<table>
+<thead>
+<tr>
+<th>Official source</th>
+<th>Use</th>
+<th>Last checked</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.aviation.govt.nz/assets/rules/transport-instruments/CATI-101-1.pdf">CAA — CATI 101-1</a> and <a href="https://www.aviation.govt.nz/rules/rule-part/part-101/">Part 101</a></td>
+<td>Current operating requirements</td>
+<td>16 Oct 2026; check current version before issue and flight</td>
+</tr>
+<tr>
+<td><a href="https://airshare.co.nz/">AirShare</a>, <a href="https://www.aip.net.nz/">AIP New Zealand</a> and <a href="https://ifis.airways.co.nz/">IFIS</a></td>
+<td>Airspace, aerodrome and NOTAM checks</td>
+<td>15 Oct 2026; every flight</td>
+</tr>
+<tr>
+<td><a href="https://shop.aeropath.aero/collections/2025-2026-visual-navigation-charts">Aeropath — Visual Navigation Charts</a></td>
+<td>Current VNC edition</td>
+<td>15 Oct 2026; every flight</td>
+</tr>
+<tr>
+<td><a href="https://www.whakatane.govt.nz/services/airport">Whakatāne Airport</a>, <a href="https://airport.tauranga.govt.nz/general-aviation/drones">Tauranga Airport drones</a> and <a href="https://www.rotorua-airport.co.nz/visiting-ga-pilots/">Rotorua Airport</a></td>
+<td>Local airport processes and contacts</td>
+<td>15 Oct 2026; affected flights</td>
+</tr>
+<tr>
+<td><a href="https://www.doc.govt.nz/drones">DOC — drones</a> and <a href="https://www.nzta.govt.nz/partners/traffic-management/accessing-our-state-highways/special-activity-types-and-applications/requests-to-fly-drones-over-a-state-highway">Waka Kotahi — drone requests</a></td>
+<td>Conservation land and state highways</td>
+<td>15 Oct 2026; affected flights</td>
+</tr>
+<tr>
+<td><a href="https://www.linz.govt.nz/guidance/geodetic-system/coordinate-systems-used-new-zealand/projections/new-zealand-transverse-mercator-2000-nztm2000">LINZ — NZTM2000</a>, <a href="https://www.linz.govt.nz/guidance/geodetic-system/coordinate-systems-used-new-zealand/vertical-datums/new-zealand-vertical-datum-2016-nzvd2016">NZVD2016</a> and <a href="https://www.linz.govt.nz/products-services/geodetic/positionz/positionz-real-time-service/connect-positionz-real-time-service">PositioNZ Real Time</a></td>
+<td>Coordinate, height and NTRIP reference</td>
+<td>15 Oct 2026</td>
+</tr>
+<tr>
+<td><a href="https://enterprise.dji.com/matrice-4-series/downloads">DJI Matrice 4 Series downloads</a>, <a href="https://enterprise.dji.com/matrice-4-series/specs">specifications</a>, <a href="https://enterprise.dji.com/matrice-350-rtk/downloads">Matrice 350 RTK downloads</a> and <a href="https://enterprise.dji.com/zenmuse-l2/faq">Zenmuse L2 FAQ</a></td>
+<td>Aircraft, panorama, mission, payload and accuracy guidance</td>
+<td>16 Oct 2026; use manual matching firmware</td>
+</tr>
+<tr>
+<td><a href="https://enterprise.dji.com/dji-terra/downloads">DJI Terra downloads</a>, <a href="https://enterprise.dji.com/dji-terra/faq">FAQ</a>, <a href="https://enterprise.dji.com/dji-terra/video">tutorials</a> and <a href="https://terra.dji.com/user-manual/en/accuracy-whitepaper/photogrammetry-accuracy.html">accuracy guide</a></td>
+<td>Processing, GCP/checkpoint, report and final-raster guidance</td>
+<td>16 Oct 2026; use help matching installed version</td>
+</tr>
+<tr>
+<td><a href="https://help.dronedeploy.com/hc/en-us/articles/1500004964822-Photo-Video-and-Pano-Media">DroneDeploy — Photo, Video and Pano Media</a></td>
+<td>Panorama upload, hosting and comparison workflow</td>
+<td>16 Oct 2026; confirm BOPRC plan/interface</td>
+</tr>
+<tr>
+<td><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/conversion/las-dataset-to-raster.htm">Esri — LAS Dataset To Raster</a>, <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/contour.htm">Contour</a> and <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/cut-fill.htm">Cut Fill</a></td>
+<td>Point-cloud, contour and volume workflows</td>
+<td>16 Oct 2026</td>
+</tr>
+<tr>
+<td><a href="https://data.linz.govt.nz/layer/121859-new-zealand-lidar-1m-dem/">LINZ — New Zealand LiDAR 1 m DEM</a> and <a href="https://www.linz.govt.nz/guidance/geodetic-system/geodetic-standards-specifications-and-resources/geodetic-standards-and-factsheets">geospatial accuracy framework</a></td>
+<td>National DEM comparison and accuracy reporting</td>
+<td>16 Oct 2026</td>
+</tr>
+<tr>
+<td><a href="https://asprs.org/Main/Main/Standards/Positional-Accuracy-Standards.aspx">ASPRS Positional Accuracy Standards</a></td>
+<td>Independent product-accuracy reference</td>
+<td>16 Oct 2026</td>
+</tr>
+<tr>
+<td><a href="https://help.autodesk.com/cloudhelp/2027/ENU/Civil3D-UserGuide/files/GUID-BD1EEFAA-598E-4767-A1DC-0352852191AC.htm">Autodesk — Create a grid surface from DEM</a></td>
+<td>Civil 3D DEM handover</td>
+<td>16 Oct 2026</td>
+</tr>
+<tr>
+<td><a href="https://www.ferntech.co.nz/Service-Request-Form">Ferntech service request</a></td>
+<td>Service booking</td>
+<td>15 Oct 2026; when booking</td>
+</tr>
+<tr>
+<td><a href="https://eu.store.bambulab.com/products/h2d">Bambu Lab H2D specifications</a> and <a href="https://www.pbtech.co.nz/product/PTRBAM0009/Bambu-Lab-H2DC-FDM-3D-Printer-with-AMS-2-Pro-Multi">PB Tech H2DC listing</a></td>
+<td>Proposed 290 mm in-house target fit and printer capacity</td>
+<td>16 Oct 2026</td>
+</tr>
+</tbody></table>
+<h2>12.2 Confirm before controlled issue</h2>
+<ul>
+<li>approve the proposed six-month service interval or retain annual as the minimum;</li>
+<li>prototype and field-test the 290 mm ASA plate, thickness, fixings and durability;</li>
+<li>validate the Matrice 4E and M350/L2 starting settings with representative field tests and the vendor;</li>
+<li>confirm the approved SmartFix profile/workflow and record no credentials in the manual;</li>
+<li>test the Matrice 4E panorama and DroneDeploy upload workflow using the team&#39;s current accounts;</li>
+<li>confirm DJI Terra templates and responsibility for maintaining them;</li>
+<li>confirm project folder, Survey/Event ID, naming, backup, managed-report link and retention requirements;</li>
+<li>confirm the Flood Media Viewer ingestion and publication process when available;</li>
+<li>confirm who sets and signs off each project&#39;s accuracy tolerance;</li>
+<li>confirm the current internal Vault/H&amp;S incident workflow and controlled forms; and</li>
+<li>complete final technical and aviation review against the current controlled documents.</li>
+</ul>
+<p><strong>Internal controlled documents remain authoritative:</strong> <em>Drones at Toi Moana — Technical Reference and Source Document</em>, <em>2023-06 JSA Engineering Team — Projects Team (FINAL)</em> and <em>BOPRC Safe Job Procedure template V4</em>.</p>
+<section class="notice no-print"><h2>Ready to check what you have learned?</h2><p>Complete the no-login practice test. It covers Part 101, planning and safe operation, field capture, processing and quality checks. Every answer includes an explanation and a link back to the relevant manual section.</p><a class="button" href="theory-test.html">Start the practice theory test →</a></section>
+<nav class="pager"><a class="button secondary" href="section-11-qa-acceptance-and-civil-3d-handover.html">← Previous</a><a class="button" href="theory-test.html">Theory test →</a></nav></article></main></body></html>

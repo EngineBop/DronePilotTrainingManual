@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Ground control points and independent checkpoints</title>
+  <desc id="desc">A comparison showing that ground control points influence model alignment while checkpoints are withheld to test the finished result independently.</desc>
+  <defs><style>.h{font:700 34px Arial;fill:#15364a}.sh{font:700 25px Arial;fill:#15364a}.t{font:18px Arial;fill:#234b5f}.k{font:700 18px Arial;fill:#0f766e}.q{font:700 18px Arial;fill:#b54708}.line{stroke:#7b98a7;stroke-width:4;fill:none}.dash{stroke:#b85c1e;stroke-width:4;stroke-dasharray:10 8;fill:none}</style></defs>
+  <rect width="1200" height="590" fill="#f5f9fa"/>
+  <text x="60" y="62" class="h">Ground control is not the same as an independent check</text>
+  <text x="60" y="96" class="t">Use both. A good fit to the control points alone does not prove the finished survey is accurate.</text>
+
+  <rect x="55" y="135" width="520" height="345" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <text x="85" y="180" class="sh">Ground control point (GCP)</text>
+  <circle cx="190" cy="285" r="58" fill="#e1f2f5" stroke="#0f789f" stroke-width="5"/>
+  <path d="M150 245L230 325M230 245L150 325" stroke="#0f789f" stroke-width="14"/>
+  <path d="M255 285H430" class="line"/>
+  <rect x="365" y="230" width="160" height="110" rx="14" fill="#164e63"/>
+  <text x="390" y="271" style="font:700 19px Arial;fill:white">Aligns model</text><text x="390" y="303" style="font:17px Arial;fill:white">uses this point</text>
+  <text x="85" y="390" class="k">Influences the adjustment</text>
+  <text x="85" y="423" class="t">Mark carefully in several clear images.</text>
+  <text x="85" y="452" class="t">Distribute control around the work area.</text>
+
+  <rect x="625" y="135" width="520" height="345" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <text x="655" y="180" class="sh">Independent checkpoint</text>
+  <circle cx="760" cy="285" r="58" fill="#fff1e6" stroke="#b85c1e" stroke-width="5"/>
+  <path d="M720 245L800 325M800 245L720 325" stroke="#b85c1e" stroke-width="14"/>
+  <path d="M825 285H1000" class="dash"/>
+  <rect x="935" y="230" width="160" height="110" rx="14" fill="#b85c1e"/>
+  <text x="961" y="271" style="font:700 19px Arial;fill:white">Accuracy test</text><text x="961" y="303" style="font:17px Arial;fill:white">compare only</text>
+  <text x="655" y="390" class="q">Must not influence the adjustment</text>
+  <text x="655" y="423" class="t">Compare modelled and surveyed coordinates.</text>
+  <text x="655" y="452" class="t">Report residuals against the job tolerance.</text>
+
+  <rect x="155" y="515" width="890" height="48" rx="12" fill="#dff3e8"/>
+  <text x="206" y="546" style="font:700 18px Arial;fill:#087a55">Control builds the fit. Checkpoints test the fit. Never quietly turn a failed checkpoint into control.</text>
+</svg>

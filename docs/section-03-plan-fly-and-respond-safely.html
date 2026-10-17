@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="BOPRC engineering and survey drone operations manual"><title>3. Plan, fly and respond safely | BOPRC Drone Manual</title><link rel="stylesheet" href="styles.css"></head><body><header class="site"><div class="bar"><a class="brand" href="index.html">BOPRC Drone Manual</a><nav><a href="index.html">Sections</a><a href="downloads/BOPRC-Engineering-Survey-Drone-Manual.pdf">Printable PDF</a><a href="downloads/survey-control-target/README.md">3D target files</a><a href="downloads/templates/README.md">Terra CSV templates</a><a href="https://github.com/EngineBop/DronePilotTrainingManual">GitHub</a></nav></div></header><main class="layout"><aside class="sidebar"><a href="section-01-purpose-and-operational-responsibilities.html">1. Purpose and operational responsibilities</a><a href="section-02-airspace-and-permissions.html">2. Airspace and permissions</a><a class="active" href="section-03-plan-fly-and-respond-safely.html">3. Plan, fly and respond safely</a><a href="section-04-aircraft-servicing-and-permanent-survey-co.html">4. Aircraft, servicing and permanent survey control</a><a href="section-05-on-site-positioning-options.html">5. On-site positioning options</a><a href="section-06-mission-planning-and-capture.html">6. Mission planning and capture</a><a href="section-07-post-flight-data-management.html">7. Post-flight data management</a><a href="section-08-dji-terra-processing-and-control.html">8. DJI Terra processing and control</a><a href="section-09-arcgis-pro-elevation-products.html">9. ArcGIS Pro elevation products</a><a href="section-10-surface-comparison-and-volumes.html">10. Surface comparison and volumes</a><a href="section-11-qa-acceptance-and-civil-3d-handover.html">11. QA, acceptance and Civil 3D handover</a><a href="section-12-sources-and-items-to-confirm.html">12. Sources and items to confirm</a></aside><article class="content"><h1>3. Plan, fly and respond safely</h1>
+<h2>3.1 Before leaving</h2>
+<p>Start with the job, not the aircraft. Confirm:</p>
+<ul>
+<li><input disabled="" type="checkbox"> purpose, site, required output, coverage and accuracy;</li>
+<li><input disabled="" type="checkbox"> pilot, observer if needed, site manager and BOPRC project engineer or Engineer&#39;s Representative;</li>
+<li><input disabled="" type="checkbox"> site induction, sign-in/sign-out and construction-site communication process;</li>
+<li><input disabled="" type="checkbox"> AirShare, VNC, AIP, Supplement and NOTAM checks;</li>
+<li><input disabled="" type="checkbox"> ATC, aerodrome, land, DOC, council, road and people/property approvals;</li>
+<li><input disabled="" type="checkbox"> current SJP and site/task risk assessment;</li>
+<li><input disabled="" type="checkbox"> weather, river/tide conditions and clear go/no-go limits;</li>
+<li><input disabled="" type="checkbox"> mission, return-to-home, lost-link, alternate landing and recovery plan; and</li>
+<li><input disabled="" type="checkbox"> aircraft, payload, batteries, controller, storage, PPE and data destination.</li>
+</ul>
+<p>A repeat job may reuse a controlled mission, but permissions, hazards, people, weather and site conditions must be checked again.</p>
+<h2>3.2 Practical risk controls</h2>
+<p>The current SJP and site-specific assessment are the working safety documents. Use this table as the training prompt, not as a replacement.</p>
+<table>
+<thead>
+<tr>
+<th>Hazard</th>
+<th>Practical controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Public, workers and contractors</strong></td>
+<td>Coordinate with the site supervisor; agree the flight window and exclusion area; brief affected workers; stop if the exclusion cannot be maintained.</td>
+</tr>
+<tr>
+<td><strong>Plant, vehicles, cranes and roads</strong></td>
+<td>Keep clear of haul routes, excavators, cranes and suspended loads. Use the site communication method and land when plant enters the operating area.</td>
+</tr>
+<tr>
+<td><strong>Birds and nesting areas</strong></td>
+<td>Scan before launch, avoid nests and roosts, and stop if birds mob the drone or show distress. Never chase wildlife.</td>
+</tr>
+<tr>
+<td><strong>Dogs and livestock</strong></td>
+<td>Secure dogs before arming; check stock location; avoid low or abrupt passes; land if animals become agitated. Never use the drone to move stock.</td>
+</tr>
+<tr>
+<td><strong>Water, rivers and coast</strong></td>
+<td>Allow extra wind and battery reserve; confirm home point; assess banks, tide, current, spray and alternate landing. Do not enter water solely to recover a drone.</td>
+</tr>
+<tr>
+<td><strong>Trees, terrain and wind shear</strong></td>
+<td>Walk the boundary; identify wires, branches and cranes; allow gust margin; test at low height; stop for abnormal drift, turbulence or power use.</td>
+</tr>
+<tr>
+<td><strong>Batteries and fire</strong></td>
+<td>Reject swollen, wet, damaged, hot or abnormal batteries; protect terminals; isolate a suspect battery and follow the emergency plan.</td>
+</tr>
+<tr>
+<td><strong>Loss of link, GNSS or RTK</strong></td>
+<td>Confirm home point and return-to-home action; keep a safe manual route; pause survey capture when positioning quality is uncertain.</td>
+</tr>
+</tbody></table>
+<h2>3.3 On site</h2>
+<ol>
+<li>Walk the launch area, flight boundary and alternate landing area. Check workers, plant, public access, animals, obstacles and weather.</li>
+<li>Sign in or complete the site process. Tell the site manager/project contact the drone team is present and confirm the flight window, exclusion area, plant movements and any temporary stop-work requirement. This is both a health-and-safety control and normal professional courtesy.</li>
+<li>Inspect the aircraft, propellers, payload, batteries, controller and storage. Do not install an untested firmware update at site.</li>
+<li>Confirm the home point, return-to-home height/action, height limit, mission boundary and any geofence warning.</li>
+<li>Brief roles, lookout sectors, communications, stop call, crewed-aircraft response and emergency landing. Confirm affected workers know that photography, video or LiDAR capture will occur.</li>
+<li>Complete a low hover and systems check before starting the production mission.</li>
+<li>During flight, maintain unaided visual line of sight and monitor aircraft, people, weather, battery, link and mission progress. Pause or land when conditions move outside the plan.</li>
+<li>After landing, close the AirShare/ATC activity, check that files open and coverage is complete, complete the flight record, clean the equipment and report defects.</li>
+</ol>
+<h2>3.4 Common in-flight problems</h2>
+<p>These actions are short training prompts. The safe response depends on the aircraft, site and event.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Immediate response</th>
+<th>Prevention / follow-up</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Low battery</strong></td>
+<td>Account for distance and wind, return early and land safely. If the reserve is eroding, use the nearest safe landing area rather than pressing on.</td>
+<td>Check the configured warnings and critical-battery action before launch. Do not plan around the final battery percentage or forced auto-land.</td>
+</tr>
+<tr>
+<td><strong>Controller link loss</strong></td>
+<td>Keep watching the aircraft and allow the verified lost-link action to operate. If the link returns and anything is uncertain, land. Reposition only when it can be done without creating another hazard.</td>
+<td>Verify lost-link action, home point and return height. Maintain clear line of sight and avoid terrain, trees and structures blocking the link.</td>
+</tr>
+<tr>
+<td><strong>RTK correction loss</strong></td>
+<td>Keep the aircraft safe, pause survey capture and allow time for reconnection. Continue without RTK only when the pilot is satisfied the flight is safe and the data purpose allows it.</td>
+<td>Record the affected area and re-fly if required. Independent checkpoints are still needed to test the finished output.</td>
+</tr>
+<tr>
+<td><strong>Sudden wind, rain or poor visibility</strong></td>
+<td>Pause and assess. Land at the nearest safe location if conditions are deteriorating. Do not rely on return-to-home into strong wind.</td>
+<td>Check forecasts and local conditions. Keep an alternate landing site and additional battery reserve over water or exposed corridors.</td>
+</tr>
+<tr>
+<td><strong>Crewed aircraft</strong></td>
+<td>Descend or land promptly and remain clear. Do not continue until the conflict and likely repeat traffic are resolved.</td>
+<td>Brief the lookout response and ask about local agricultural or helicopter activity before launch.</td>
+</tr>
+</tbody></table>
+<p>Stay calm, use deliberate inputs and preserve controller recording and logs after an abnormal event.</p>
+<h2>3.5 Incident recording and escalation</h2>
+<p>People, crewed aircraft and the public come before the drone.</p>
+<ul>
+<li>Make the area safe and land or stop the aircraft if possible.</li>
+<li>Call emergency services or alert ATC/aerodrome staff when required.</li>
+<li>Do not enter water, climb trees, enter private land or approach machinery solely to recover a drone.</li>
+<li>Preserve the aircraft, batteries, controller recording, logs, photographs and witness details.</li>
+<li>Quarantine damaged or unreliable equipment until the technical team has cleared it for service.</li>
+</ul>
+<p>Record the event in the applicable BOPRC incident process, expected to be <strong>Vault</strong>, and tell the people relevant to what happened:</p>
+<table>
+<thead>
+<tr>
+<th>Contact</th>
+<th>When to involve them</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Responsible manager / Vault / H&amp;S</strong></td>
+<td>Injury, near miss, unsafe event, aviation conflict, loss, damage or environmental effect.</td>
+</tr>
+<tr>
+<td><strong>Property</strong></td>
+<td>Lost, damaged or recovered equipment; insurance, write-off, disposal or asset-status change.</td>
+</tr>
+<tr>
+<td><strong>Technical team / vendor</strong></td>
+<td>Malfunction, impact, water ingress, abnormal vibration, or repeated link, GNSS or RTK fault.</td>
+</tr>
+<tr>
+<td><strong>Landowner / site supervisor</strong></td>
+<td>Aircraft or debris on land, access, damage, stock/public effects or site disruption.</td>
+</tr>
+<tr>
+<td><strong>CAA / ATC / aerodrome</strong></td>
+<td>When the event and current reporting rules require notification. CAA safety contact: <strong>0508 4 SAFETY (0508 472 338)</strong>.</td>
+</tr>
+</tbody></table>
+<p>Every incident is different. Make the situation safe first, then confirm the correct notifications with the responsible manager.</p>
+<hr>
+<nav class="pager"><a class="button secondary" href="section-02-airspace-and-permissions.html">← Previous</a><a class="button" href="section-04-aircraft-servicing-and-permanent-survey-co.html">Next →</a></nav></article></main></body></html>

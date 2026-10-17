@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual comparison of a LAS point cloud, DSM and bare-earth DEM</title>
+  <desc id="desc">Three panels show individual classified LiDAR points, a first-surface model that includes trees and structures, and a bare-earth terrain model.</desc>
+  <defs><linearGradient id="terrain" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c7a8c"/><stop offset="0.48" stop-color="#80b96a"/><stop offset="1" stop-color="#e0bd6c"/></linearGradient><style>.h{font:700 31px Arial;fill:#15364a}.s{font:17px Arial;fill:#36596b}.k{font:700 20px Arial;fill:#15364a}.t{font:15px Arial;fill:#36596b}.tag{font:700 14px Arial;fill:white}</style></defs>
+  <rect width="1200" height="760" fill="#f5f9fa"/>
+  <text x="50" y="55" class="h">One site, three different elevation products</text>
+  <text x="50" y="87" class="s">Conceptual training figure — detail and cell size do not prove accuracy.</text>
+  <g transform="translate(45 125)">
+    <rect width="350" height="430" rx="18" fill="white" stroke="#c2d4dc" stroke-width="2"/>
+    <text x="24" y="43" class="k">1  LAS / LAZ point cloud</text>
+    <text x="24" y="69" class="t">Individual 3D returns, often classified.</text>
+    <path d="M35 331 C96 292 148 310 202 270 C246 237 281 264 320 225" fill="none" stroke="#795548" stroke-width="4"/>
+    <g fill="#8b6b54"><circle cx="45" cy="325" r="3"/><circle cx="67" cy="316" r="3"/><circle cx="89" cy="307" r="3"/><circle cx="111" cy="303" r="3"/><circle cx="133" cy="304" r="3"/><circle cx="155" cy="296" r="3"/><circle cx="177" cy="282" r="3"/><circle cx="199" cy="269" r="3"/><circle cx="221" cy="252" r="3"/><circle cx="243" cy="242" r="3"/><circle cx="265" cy="246" r="3"/><circle cx="287" cy="243" r="3"/><circle cx="309" cy="230" r="3"/></g>
+    <g fill="#3f8e5d"><circle cx="85" cy="272" r="4"/><circle cx="75" cy="251" r="4"/><circle cx="94" cy="240" r="4"/><circle cx="110" cy="263" r="4"/><circle cx="124" cy="238" r="4"/><circle cx="101" cy="218" r="4"/><circle cx="121" cy="211" r="4"/><circle cx="146" cy="258" r="4"/><circle cx="151" cy="231" r="4"/><circle cx="159" cy="205" r="4"/><circle cx="172" cy="223" r="4"/><circle cx="178" cy="251" r="4"/></g>
+    <g fill="#6f8794"><circle cx="225" cy="206" r="3"/><circle cx="241" cy="206" r="3"/><circle cx="257" cy="206" r="3"/><circle cx="273" cy="206" r="3"/><circle cx="225" cy="222" r="3"/><circle cx="241" cy="222" r="3"/><circle cx="257" cy="222" r="3"/><circle cx="273" cy="222" r="3"/><circle cx="225" cy="238" r="3"/><circle cx="241" cy="238" r="3"/><circle cx="257" cy="238" r="3"/><circle cx="273" cy="238" r="3"/></g>
+    <rect x="32" y="360" width="86" height="28" rx="7" fill="#8b6b54"/><text x="48" y="379" class="tag">ground</text><rect x="130" y="360" width="86" height="28" rx="7" fill="#3f8e5d"/><text x="141" y="379" class="tag">vegetation</text><rect x="228" y="360" width="86" height="28" rx="7" fill="#6f8794"/><text x="243" y="379" class="tag">structure</text>
+    <text x="24" y="402" class="t">Shows the measured samples before</text><text x="24" y="424" class="t">they are converted to a grid surface.</text>
+  </g>
+  <g transform="translate(425 125)">
+    <rect width="350" height="430" rx="18" fill="white" stroke="#c2d4dc" stroke-width="2"/>
+    <text x="24" y="43" class="k">2  DSM / first surface</text>
+    <text x="24" y="69" class="t">Top visible surface: ground + objects.</text>
+    <rect x="28" y="95" width="294" height="260" rx="12" fill="url(#terrain)"/>
+    <path d="M35 304 C85 250 139 284 183 236 C224 190 268 237 316 170" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="11"/>
+    <g fill="#245d46"><circle cx="93" cy="180" r="31"/><circle cx="132" cy="205" r="28"/><circle cx="158" cy="170" r="25"/></g>
+    <polygon points="218,170 274,145 306,190 250,214" fill="#d6dce0"/><polygon points="218,170 250,214 250,258 218,214" fill="#9aaab2"/><polygon points="250,214 306,190 306,233 250,258" fill="#81939d"/>
+    <text x="25" y="393" class="t">Trees, buildings, vehicles and other</text><text x="25" y="415" class="t">upper surfaces remain in the model.</text>
+  </g>
+  <g transform="translate(805 125)">
+    <rect width="350" height="430" rx="18" fill="white" stroke="#c2d4dc" stroke-width="2"/>
+    <text x="24" y="43" class="k">3  DEM / bare earth</text>
+    <text x="24" y="69" class="t">Ground returns after classification.</text>
+    <rect x="28" y="95" width="294" height="260" rx="12" fill="url(#terrain)"/>
+    <path d="M35 304 C85 250 139 284 183 236 C224 190 268 237 316 170" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="11"/>
+    <path d="M42 326 C96 286 152 303 204 266 C253 229 280 250 315 213" fill="none" stroke="#163b4b" stroke-width="3"/>
+    <text x="25" y="393" class="t">Vegetation and structures are removed</text><text x="25" y="415" class="t">only where classification supports it.</text>
+  </g>
+  <g transform="translate(80 600)">
+    <rect width="1040" height="105" rx="15" fill="#e3f5ee"/>
+    <text x="24" y="37" class="k">Cross-section idea</text>
+    <path d="M210 72 C320 42 420 70 520 51 C620 31 720 70 830 44" fill="none" stroke="#8b6b54" stroke-width="4"/>
+    <path d="M210 72 C280 52 310 18 350 40 C390 60 420 70 520 51 C580 40 610 12 650 25 C690 38 730 67 830 44" fill="none" stroke="#0f8277" stroke-width="4"/>
+    <text x="850" y="48" class="t">DSM</text><text x="850" y="73" class="t">DEM</text><line x1="902" y1="43" x2="958" y2="43" stroke="#0f8277" stroke-width="4"/><line x1="902" y1="68" x2="958" y2="68" stroke="#8b6b54" stroke-width="4"/>
+  </g>
+</svg>

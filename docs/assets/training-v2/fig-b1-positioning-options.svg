@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Four positioning options for field capture</title>
+  <desc id="desc">A practical comparison of relative capture, rover-surveyed targets, D-RTK 2 and NTRIP positioning.</desc>
+  <defs><style>.h{font:700 34px Arial;fill:#15364a}.s{font:18px Arial;fill:#234b5f}.k{font:700 24px Arial;fill:#15364a}.t{font:18px Arial;fill:#234b5f}.b{font:700 18px Arial;fill:#0f766e}.q{font:700 18px Arial;fill:#b54708}</style></defs>
+  <rect width="1200" height="650" fill="#f5f9fa"/>
+  <text x="60" y="62" class="h">Choose the positioning setup the job needs</text>
+  <text x="60" y="96" class="s">More equipment does not automatically mean a better result. Match the setup to the required output and check it.</text>
+
+  <rect x="55" y="135" width="525" height="190" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <circle cx="105" cy="185" r="28" fill="#164e63"/><text x="96" y="193" style="font:700 24px Arial;fill:white">1</text>
+  <text x="150" y="192" class="k">Relative capture</text>
+  <text x="85" y="238" class="t">Progress photos, visual inspection or context only.</text>
+  <text x="85" y="272" class="b">Fastest setup</text><text x="220" y="272" class="t">— no surveyed control.</text>
+  <text x="85" y="303" class="q">Not for engineering measurement.</text>
+
+  <rect x="620" y="135" width="525" height="190" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <circle cx="670" cy="185" r="28" fill="#0f766e"/><text x="661" y="193" style="font:700 24px Arial;fill:white">2</text>
+  <text x="715" y="192" class="k">Rover-surveyed targets</text>
+  <text x="650" y="238" class="t">Visible targets measured with an RTK rover.</text>
+  <text x="650" y="272" class="b">Best for</text><text x="725" y="272" class="t">— independent control and checkpoints.</text>
+  <text x="650" y="303" class="q">Survey the exact marked centre.</text>
+
+  <rect x="55" y="355" width="525" height="190" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <circle cx="105" cy="405" r="28" fill="#2563a6"/><text x="96" y="413" style="font:700 24px Arial;fill:white">3</text>
+  <text x="150" y="412" class="k">D-RTK 2 base station</text>
+  <text x="85" y="458" class="t">Local corrections where mobile coverage is poor.</text>
+  <text x="85" y="492" class="b">Preferred</text><text x="180" y="492" class="t">— set over a verified known point.</text>
+  <text x="85" y="523" class="q">Do not move it during the mission.</text>
+
+  <rect x="620" y="355" width="525" height="190" rx="20" fill="white" stroke="#bfd1d9" stroke-width="3"/>
+  <circle cx="670" cy="405" r="28" fill="#b85c1e"/><text x="661" y="413" style="font:700 24px Arial;fill:white">4</text>
+  <text x="715" y="412" class="k">NTRIP network RTK</text>
+  <text x="650" y="458" class="t">Network corrections through the controller's internet.</text>
+  <text x="650" y="492" class="b">Convenient</text><text x="758" y="492" class="t">— when coverage is reliable.</text>
+  <text x="650" y="523" class="q">Confirm the correction source and RTK FIX.</text>
+
+  <rect x="155" y="585" width="890" height="42" rx="12" fill="#dff3e8"/>
+  <text x="262" y="612" style="font:700 18px Arial;fill:#087a55">RTK improves the aircraft position; independent checkpoints still test the finished result.</text>
+</svg>

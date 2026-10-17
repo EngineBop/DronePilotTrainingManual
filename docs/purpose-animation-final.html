@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BOPRC stopbank drone survey lifecycle — final review</title>
+  <style>
+    :root{--ink:#f7faf8;--muted:rgba(247,250,248,.8);--orange:#ff6a1a;--glass:rgba(8,25,29,.82)}
+    *{box-sizing:border-box} html,body{width:100%;height:100%;margin:0;background:#061417;overflow:hidden;font-family:Inter,"Segoe UI",Arial,sans-serif}
+    button{font:inherit}.page{width:100%;height:100%;display:grid;place-items:center;background:#061417}
+    .film{position:relative;width:min(100vw,calc(100vh * 16 / 9));height:min(100vh,calc(100vw * 9 / 16));overflow:hidden;background:#071619;color:var(--ink);isolation:isolate;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 18px 80px rgba(0,0,0,.42)}
+    .scene{position:absolute;inset:0;opacity:0;transition:opacity 1.15s ease;overflow:hidden;background:#0a2025}
+    .scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,15,20,.26),transparent 28%,transparent 62%,rgba(3,15,20,.46));pointer-events:none}
+    .scene img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.035);filter:saturate(.98) contrast(1.01);will-change:transform}
+    .scene.active{opacity:1;z-index:2}.scene.active img{animation:moveA var(--duration,14s) ease-in-out both}.scene:nth-child(even).active img{animation-name:moveB}
+    @keyframes moveA{from{transform:scale(1.035) translate3d(-.45%,.25%,0)}to{transform:scale(1.075) translate3d(.45%,-.2%,0)}}
+    @keyframes moveB{from{transform:scale(1.07) translate3d(.35%,-.2%,0)}to{transform:scale(1.035) translate3d(-.35%,.2%,0)}}
+    .vignette{position:absolute;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 90px rgba(0,0,0,.25)}
+    .brand{position:absolute;z-index:8;left:clamp(22px,3.8vw,64px);top:clamp(18px,3vw,48px);display:flex;align-items:center;gap:12px;color:var(--muted);font-size:clamp(11px,.95vw,15px);font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 15px rgba(0,0,0,.6)}
+    .brand::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 7px rgba(255,106,26,.18)}
+    .heading{position:absolute;z-index:8;left:clamp(22px,3.8vw,64px);top:clamp(60px,8vw,118px);max-width:min(830px,72vw);text-shadow:0 3px 22px rgba(0,0,0,.7)}
+    .heading .step{color:#fff;font-size:clamp(11px,.95vw,15px);font-weight:900;letter-spacing:.14em;text-transform:uppercase;opacity:0;transform:translateY(7px);transition:.45s ease}
+    .heading h1{margin:8px 0 0;font-size:clamp(28px,4vw,66px);line-height:1;letter-spacing:-.045em;opacity:0;transform:translateY(17px);transition:.62s .07s cubic-bezier(.2,.8,.2,1)}
+    .heading.show .step,.heading.show h1{opacity:1;transform:none}
+    .caption-wrap{position:absolute;z-index:9;left:50%;bottom:clamp(67px,10vh,112px);transform:translateX(-50%);width:min(960px,88vw);display:flex;justify-content:center;pointer-events:none}
+    .caption{margin:0;padding:12px 22px 14px;border-radius:17px;background:rgba(4,14,17,.81);color:#fff;font-size:clamp(15px,1.5vw,25px);line-height:1.34;font-weight:650;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.26);backdrop-filter:blur(9px);opacity:0;transform:translateY(8px);transition:.28s ease;max-width:100%}
+    .caption.show{opacity:1;transform:none}.controls{position:absolute;z-index:12;left:clamp(18px,3vw,48px);right:clamp(18px,3vw,48px);bottom:clamp(15px,2.4vh,30px);display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
+    .control-group{display:flex;gap:8px;align-items:center}.control{height:44px;min-width:44px;padding:0 14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:var(--glass);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 22px rgba(0,0,0,.2);backdrop-filter:blur(10px)}
+    .control:hover{background:rgba(18,43,47,.95);border-color:rgba(255,255,255,.38)}.control svg{width:18px;height:18px;fill:currentColor}.timeline{position:relative;height:7px;border-radius:999px;background:rgba(255,255,255,.28);overflow:hidden;cursor:pointer}.progress{position:absolute;inset:0 auto 0 0;width:0;border-radius:inherit;background:linear-gradient(90deg,#ff6a1a,#ffc24a)}
+    .time{min-width:100px;color:#fff;font-size:13px;font-variant-numeric:tabular-nums;text-shadow:0 2px 8px rgba(0,0,0,.8)}.stage-dots{position:absolute;z-index:8;right:clamp(22px,4vw,62px);top:clamp(24px,3vw,48px);display:flex;gap:6px}.stage-dot{width:13px;height:4px;border-radius:4px;background:rgba(255,255,255,.38);transition:.3s}.stage-dot.active{width:28px;background:var(--orange)}
+    .start{position:absolute;inset:0;z-index:30;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,rgba(4,18,23,.69),rgba(4,18,23,.23)),url('animation-assets/scene-01-purpose.png') center/cover;transition:opacity .65s ease,visibility .65s}.start.hidden{opacity:0;visibility:hidden}.start-card{width:min(720px,90vw);padding:clamp(24px,4vw,48px);border-radius:28px;color:#fff;background:rgba(5,24,28,.8);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 90px rgba(0,0,0,.42);backdrop-filter:blur(14px);text-align:center}.start-card .kicker{margin:0 0 10px;color:#ffae72;font-size:13px;letter-spacing:.14em;font-weight:900;text-transform:uppercase}.start-card h2{margin:0;font-size:clamp(34px,5vw,66px);line-height:1;letter-spacing:-.045em}.start-card p{margin:18px auto 24px;max-width:590px;color:rgba(255,255,255,.84);font-size:clamp(16px,1.45vw,21px);line-height:1.5}.play-main{border:0;border-radius:999px;padding:14px 24px;background:var(--orange);color:#fff;font-weight:850;cursor:pointer;box-shadow:0 12px 30px rgba(255,106,26,.34)}
+    @media(max-width:700px){.control .label{display:none}.control{padding:0 12px}.controls{grid-template-columns:auto 1fr}.time{display:none}.brand{max-width:65vw}.stage-dots{display:none}}
+    @media(prefers-reduced-motion:reduce){.scene.active img{animation:none}}
+  </style>
+</head>
+<body><div class="page"><main class="film" aria-label="BOPRC stopbank drone survey lifecycle animation">
+  <div class="scene active" style="--duration:8s"><img src="animation-assets/scene-01-purpose.png" alt="Drone surveying an active stopbank project"></div>
+  <div class="scene" style="--duration:22s"><img src="animation-assets/scene-prelaunch.png" alt="Six practical stages before launch"></div>
+  <div class="scene" style="--duration:13s"><img src="animation-assets/scene-preconstruction-plan.png" alt="Existing stopbank and planned widened project footprint before construction"></div>
+  <div class="scene" style="--duration:16s"><img src="animation-assets/scene-planning-v3.png" alt="Complete project survey corridor including earthworks, access, machinery and laydown"></div>
+  <div class="scene" style="--duration:14s"><img src="animation-assets/scene-03-control-install-v2.png" alt="Permanent survey control installed during the pre-construction walkover beside an existing grassed stopbank"></div>
+  <div class="scene" style="--duration:16s"><img src="animation-assets/scene-repeat-flights-v2.png" alt="One drone repeating the approved route over the stopbank project"></div>
+  <div class="scene" style="--duration:13s"><img src="animation-assets/scene-05-checkpoints.png" alt="Independent checkpoints measured where engineering accuracy matters"></div>
+  <div class="scene" style="--duration:15s"><img src="animation-assets/scene-media-capture.png" alt="Video and oblique photographs collected for project records and communication"></div>
+  <div class="scene" style="--duration:14s"><img src="animation-assets/scene-06-processing.png" alt="Survey data processed and checked into engineering evidence"></div>
+  <div class="scene" style="--duration:15s"><img src="animation-assets/scene-07-flood-response.png" alt="Flood response mapping debris lines, flood extent and erosion"></div>
+  <div class="scene" style="--duration:16s"><img src="animation-assets/scene-photosphere.png" alt="Photosphere capture for immersive site and flood records"></div>
+  <div class="scene" style="--duration:9s"><img src="animation-assets/scene-08-finish.png" alt="Completed stopbank supported by repeatable evidence"></div>
+  <div class="vignette"></div><div class="brand">BOPRC engineering drone surveys</div>
+  <div class="heading show"><div class="step">The purpose</div><h1>Why we use drones</h1></div><div class="stage-dots" aria-hidden="true"></div><div class="caption-wrap"><p class="caption"></p></div>
+  <div class="controls"><div class="control-group"><button class="control play" type="button" aria-label="Play or pause"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg><span class="label">Play</span></button><button class="control restart" type="button" aria-label="Restart"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6a6 6 0 1 1-10.9-3.5L5.65 8.05A8 8 0 1 0 20 13c0-4.42-3.58-8-8-8z"></path></svg></button><button class="control music" type="button" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"></path></svg><span class="label">Music on</span></button></div><div class="timeline" aria-label="Animation timeline"><div class="progress"></div></div><div class="time">0:00 / 3:13</div></div>
+  <section class="start"><div class="start-card"><p class="kicker">Illustrated overview</p><h2>Why we use drones</h2><p>A clear overview of the stopbank survey lifecycle—from planning and permanent control to repeat flights, useful site media, independent checks and defensible engineering evidence.</p><button class="play-main" type="button">Play animation</button></div></section>
+  <audio class="narration" preload="auto" src="animation-assets/narration-v4.mp3"></audio>
+</main></div>
+<script>
+  const TOTAL=193;
+  const scenes=[
+    {start:0,title:'Why we use drones',step:'The purpose'},
+    {start:7.072,title:'Six stages before launch',step:'Before launch'},
+    {start:40.158,title:'Start with the existing site',step:'Stage 1'},
+    {start:54.742,title:'Plan the whole project area',step:'Stage 2'},
+    {start:73.766,title:'Build permanent control',step:'Stage 3'},
+    {start:89.583,title:'Repeat the same flight',step:'Stage 4'},
+    {start:108.908,title:'Prove the accuracy',step:'Stage 5'},
+    {start:125.233,title:'Capture the wider record',step:'After mapping'},
+    {start:142.667,title:'Turn data into evidence',step:'Processing and QA'},
+    {start:156.962,title:'Support flood response',step:'More than construction'},
+    {start:170.490,title:'Create an immersive flood record',step:'Photosphere'},
+    {start:186.828,title:'Better evidence, better decisions, better results',step:'One repeatable workflow'}
+  ];
+  const captions=[
+    [.1,7.122,'Every stopbank project begins with a simple question: what do we need to understand, and why?'],
+    [7.072,11.663,'Before launch, we work through six practical stages.'],
+    [11.663,15.104,'We confirm the purpose and job brief.'],
+    [15.104,21.230,'We confirm land access, site contacts and any induction requirements.'],
+    [21.230,23.697,'We check the airspace.'],
+    [23.697,28.453,'We consider weather, hazards and practical risk controls.'],
+    [28.453,33.950,'We make sure the aircraft, batteries, controller and storage are ready.'],
+    [33.950,40.158,'Then, on site, the pilot completes the final checks and makes the decision to fly.'],
+    [40.158,44.558,'Most of our projects upgrade an existing stopbank.'],
+    [44.558,54.742,'Before construction begins, we record the smaller existing bank and map the full agreed project area, including the future widened footprint.'],
+    [54.742,64.857,'The survey also covers access tracks, vehicle areas and the complete laydown area, including parked machinery and stored materials.'],
+    [64.857,73.766,'Aerial photography gives us a clear record of how much land was occupied, which can support later discussions with landowners.'],
+    [73.766,86.430,'During the pre-construction walkover, we install permanent BOPRC control plates on stable ground, outside earthworks, haul routes and places likely to be disturbed.'],
+    [86.430,89.583,'Then we fly the baseline mission.'],
+    [89.583,101.946,'As construction progresses, we return to the same saved flight plan: after stripping, during key work stages, before topsoil, and for the final as-built record.'],
+    [101.946,108.908,'The drone stays over the authorised project area and repeats the same coverage each time.'],
+    [108.908,118.969,'Independent checkpoints are placed where accuracy matters most: on a new crest, at the base of a trench, or beside a completed culvert.'],
+    [118.969,125.233,'Each checkpoint is surveyed with the RTK GNSS rover before the flight.'],
+    [125.233,130.975,'After the mapping flight, we also collect video and oblique photographs.'],
+    [130.975,142.667,'These provide a clear visual record of key construction activities and support project meetings, management updates, stakeholder engagement and communications.'],
+    [142.667,156.962,'The survey data is processed and checked, then turned into practical evidence: surfaces, quantities, photographs, video and clear project records for council staff, contractors and landowners.'],
+    [156.962,170.490,'The same tools support flood response: mapping debris lines and flood extent, recording riverbank and coastal erosion, and comparing channels, banks and stopbanks with their pre-flood condition.'],
+    [170.490,178.837,'For flood response, or other situations where an immersive record is useful, we also capture a Photosphere.'],
+    [178.837,186.828,'It lets people look around the whole flood scene later, helping with briefings, comparison and investigation.'],
+    [186.828,193,'One repeatable workflow: better evidence, better decisions, better results.']
+  ];
+  const audio=document.querySelector('.narration'),slides=[...document.querySelectorAll('.scene')],heading=document.querySelector('.heading'),step=heading.querySelector('.step'),title=heading.querySelector('h1'),caption=document.querySelector('.caption'),progress=document.querySelector('.progress'),time=document.querySelector('.time'),play=document.querySelector('.play'),playLabel=play.querySelector('.label'),playIcon=play.querySelector('path'),start=document.querySelector('.start'),dots=document.querySelector('.stage-dots');
+  let currentScene=0,musicOn=true,music=null,raf=0,clockStart=0,pausedAt=0,usingAudio=false,running=false;
+  scenes.forEach((_,i)=>{const dot=document.createElement('span');dot.className='stage-dot'+(i===0?' active':'');dots.append(dot)});
+  const fmt=s=>{s=Math.max(0,Math.floor(s||0));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`};
+  function setScene(index){if(index===currentScene&&slides[index].classList.contains('active'))return;currentScene=index;slides.forEach((slide,i)=>slide.classList.toggle('active',i===index));[...dots.children].forEach((dot,i)=>dot.classList.toggle('active',i===index));heading.classList.remove('show');setTimeout(()=>{step.textContent=scenes[index].step;title.textContent=scenes[index].title;heading.classList.add('show')},160)}
+  function setPlaying(on){playLabel.textContent=on?'Pause':'Play';playIcon.setAttribute('d',on?'M6 5h4v14H6zm8 0h4v14h-4z':'M8 5v14l11-7z')}
+  function currentTime(){return usingAudio?(audio.currentTime||0):(running?pausedAt+(performance.now()-clockStart)/1000:pausedAt)}
+  function render(){const t=Math.min(TOTAL,currentTime());let index=0;scenes.forEach((s,i)=>{if(t>=s.start)index=i});setScene(index);const line=captions.find(([a,b])=>t>=a&&t<b);caption.textContent=line?line[2]:'';caption.classList.toggle('show',Boolean(line));progress.style.width=`${Math.min(100,t/TOTAL*100)}%`;time.textContent=`${fmt(t)} / ${fmt(TOTAL)}`;if(t>=TOTAL){pause();return}if(running)raf=requestAnimationFrame(render)}
+  function createMusic(){if(music)return music;const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return null;const ctx=new Ctx(),master=ctx.createGain();master.gain.value=.018;master.connect(ctx.destination);const chords=[[146.83,220,293.66],[130.81,196,261.63],[164.81,246.94,329.63],[110,164.81,220]];let ci=0,timer=0;const schedule=()=>{const now=ctx.currentTime;chords[ci++%chords.length].forEach((freq,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain(),filter=ctx.createBiquadFilter();osc.type=i===0?'sine':'triangle';osc.frequency.value=freq;filter.type='lowpass';filter.frequency.value=850;gain.gain.setValueAtTime(.0001,now);gain.gain.linearRampToValueAtTime(i===0?.09:.032,now+1.7);gain.gain.exponentialRampToValueAtTime(.0001,now+7.5);osc.connect(filter).connect(gain).connect(master);osc.start(now);osc.stop(now+7.7)})};return music={ctx,start(){if(ctx.state==='suspended')ctx.resume();schedule();clearInterval(timer);timer=setInterval(schedule,7200)},stop(){clearInterval(timer);timer=0}}}
+  async function begin(){start.classList.add('hidden');running=true;clockStart=performance.now();if(musicOn){const m=createMusic();if(m)m.start()}try{audio.currentTime=pausedAt;await audio.play();usingAudio=true}catch{usingAudio=false}setPlaying(true);cancelAnimationFrame(raf);render()}
+  function pause(){if(usingAudio){pausedAt=audio.currentTime;audio.pause()}else if(running)pausedAt=currentTime();running=false;if(music)music.stop();setPlaying(false);cancelAnimationFrame(raf);render()}
+  function seek(t){pausedAt=Math.max(0,Math.min(TOTAL,t));if(usingAudio)audio.currentTime=pausedAt;if(running)clockStart=performance.now();render()}
+  document.querySelector('.play-main').addEventListener('click',begin);play.addEventListener('click',()=>running?pause():begin());document.querySelector('.restart').addEventListener('click',()=>{seek(0);begin()});document.querySelector('.music').addEventListener('click',e=>{musicOn=!musicOn;e.currentTarget.setAttribute('aria-pressed',String(musicOn));e.currentTarget.querySelector('.label').textContent=musicOn?'Music on':'Music off';if(musicOn&&running){const m=createMusic();if(m)m.start()}else if(music)music.stop()});document.querySelector('.timeline').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();seek((e.clientX-r.left)/r.width*TOTAL)});audio.addEventListener('ended',()=>{pausedAt=TOTAL;pause()});render();
+</script></body></html>
