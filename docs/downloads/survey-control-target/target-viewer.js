@@ -25,9 +25,9 @@ const group=new THREE.Group();scene.add(group);
 const parts=[];
 const loader=new STLLoader();
 const files=[
-  ["base","boprc-survey-control-target-base-290mm.stl",0x37434a,0],
-  ["dark","boprc-survey-control-target-dark-inlays-290mm.stl",0x111315,1],
-  ["light","boprc-survey-control-target-light-inlays-290mm.stl",0xf4f1df,2]
+  ["base","boprc-survey-control-target-base-290mm.stl?v=lettering-1",0x37434a,0],
+  ["dark","boprc-survey-control-target-dark-inlays-290mm.stl?v=lettering-1",0x111315,1],
+  ["light","boprc-survey-control-target-light-inlays-290mm.stl?v=lettering-1",0xf4f1df,2]
 ];
 
 function render(){renderer.render(scene,camera)}

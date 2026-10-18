@@ -42,11 +42,11 @@
   <article class="content">
     <div class="eyebrow">Permanent project survey control</div>
     <h1>Download the 290 mm survey-control target</h1>
-    <p>This three-file STL set creates one proposed high-contrast BOPRC permanent control plate. The files are separate so Bambu Studio can assign the correct colours to each component; they are normally loaded together and printed as one fused plate in one job.</p>
+    <p>This three-file STL set creates one proposed high-contrast BOPRC permanent control plate. The fixed BOPRC wording is built into the white inlay model. The files are separate so Bambu Studio can assign the correct colours to each component; they are normally loaded together and printed as one fused plate in one job.</p>
 
     <div class="specs">
       <div><strong>290 × 290 mm</strong>assembled plate</div>
-      <div><strong>3.2 mm</strong>total thickness</div>
+      <div><strong>3.2 mm</strong>plate body · 3.8 mm at raised lettering</div>
       <div><strong>4 × 7 mm</strong>through-holes</div>
       <div><strong>ASA</strong>recommended material</div>
     </div>
@@ -93,13 +93,13 @@
       <li>In Bambu Studio, select all three STL files at once and choose <strong>Load as a single object with multiple parts</strong>. Do not auto-arrange the parts.</li>
       <li>Assign the structural base and dark inlays to black ASA, and assign the light inlays to white ASA.</li>
       <li>Print the combined model as one multi-colour job. The components fuse together during printing; they are not intended to be three loose field pieces.</li>
-      <li>Confirm the assembled size is 290 × 290 × 3.2 mm and every fixing hole is open before slicing.</li>
+      <li>Confirm the assembled size is 290 × 290 mm, with a 3.2 mm plate body and raised lettering reaching 3.8 mm. Check that every fixing hole is open before slicing.</li>
       <li>Use ASA settings validated for the BOPRC printer, including suitable bed preparation, ventilation and warp control.</li>
-      <li>Add the point ID and approved wording as contrasting surface text while keeping the surveyed centre unobstructed.</li>
+      <li>The fixed wording is already included in the white inlay. Add only the unique point ID, such as <strong>GCP-001</strong>, as contrasting surface text in Bambu Studio while keeping the surveyed centre unobstructed.</li>
       <li>Print a test piece before producing a full field set.</li>
     </ol>
 
-    <blockquote><strong>Approved wording:</strong><br>BOPRC SURVEY CONTROL<br>PLEASE DO NOT REMOVE<br>0800 884 880</blockquote>
+    <blockquote><strong>Fixed wording included in the model:</strong><br>BOPRC SURVEY CONTROL<br>PLEASE DO NOT REMOVE<br>0800 884 880<br><br><strong>Add for each plate:</strong> a unique point ID such as GCP-001, GCP-002 or GCP-003.</blockquote>
 
     <h2 id="field">Field installation note</h2>
     <p>This STL set is a proposed fabrication starting point, not a certified installation design. Select fasteners and the installation method for the ground conditions and services. Install the plate nearly flush on a compacted fine-gravel pad, keep the exact centre visible, and survey that centre after installation.</p>
@@ -107,6 +107,6 @@
     <div class="pager"><a href="../../section-04-aircraft-servicing-and-permanent-survey-co.html">← Section 4: permanent survey control</a><a href="../../index.html">Manual home →</a></div>
   </article>
 </main>
-<script type="module" src="target-viewer.js"></script>
+<script type="module" src="target-viewer.js?v=lettering-1"></script>
 </body>
 </html>
