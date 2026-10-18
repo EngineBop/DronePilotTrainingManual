@@ -6,6 +6,7 @@
   <meta name="description" content="Download the BOPRC 290 mm permanent survey-control target STL print set.">
   <title>3D survey-control target files | BOPRC Drone Manual</title>
   <script src="../../theme.js"></script><link rel="stylesheet" href="../../styles.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
   <style>
     .download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0 34px}
     .download-card{border:1px solid var(--line);border-radius:15px;padding:20px;background:#f8fbfc}
@@ -16,6 +17,17 @@
     .specs div{background:#e8f3f7;border-radius:12px;padding:13px}
     .specs strong{display:block;color:var(--navy);font-size:1.15rem}
     .content ol li{margin:.65rem 0}
+    .target-viewer{margin:26px 0 34px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--soft)}
+    .target-viewer-stage{position:relative;min-height:460px;background:linear-gradient(145deg,#e7f1f5,#c9dce4)}
+    html[data-theme="dark"] .target-viewer-stage{background:linear-gradient(145deg,#102f3d,#071d28)}
+    .target-viewer canvas{display:block;width:100%;height:460px;touch-action:none}
+    .target-viewer-status{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);font-weight:700;pointer-events:none}.target-viewer-status[hidden]{display:none}
+    .target-viewer-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;background:var(--paper);border-top:1px solid var(--line)}
+    .target-viewer-tools label{display:flex;align-items:center;gap:8px;font-weight:700}
+    .target-viewer-legend{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+    .target-viewer-legend span{display:flex;align-items:center;gap:6px}.target-viewer-legend i{width:14px;height:14px;border-radius:3px;border:1px solid #71808a}
+    html[data-theme="dark"] .specs div{background:#173746}
+    @media(max-width:640px){.target-viewer-stage{min-height:340px}.target-viewer canvas{height:340px}.target-viewer-legend{width:100%;margin-left:0}}
   </style>
 </head>
 <body>
@@ -38,6 +50,20 @@
       <div><strong>4 × 7 mm</strong>through-holes</div>
       <div><strong>ASA</strong>recommended material</div>
     </div>
+
+    <section class="target-viewer" aria-labelledby="viewer-title">
+      <div class="target-viewer-stage" id="target-viewer-stage">
+        <div class="target-viewer-status" id="target-viewer-status">Loading the three STL parts…</div>
+      </div>
+      <div class="target-viewer-tools">
+        <button class="button secondary" id="target-view-reset" type="button">Reset 3D view</button>
+        <label><input id="target-view-explode" type="checkbox"> Separate the layers</label>
+        <div class="target-viewer-legend" aria-label="Model part colours">
+          <span><i style="background:#37434a"></i>Base</span><span><i style="background:#111"></i>Dark inlays</span><span><i style="background:#f4f1df"></i>Light inlays</span>
+        </div>
+      </div>
+      <p class="figure-note" id="viewer-title" style="padding:0 16px 14px;margin:0">Drag to rotate, scroll to zoom, or use two fingers on a touch screen. The view assembles the three downloadable STL files in their actual shared coordinates.</p>
+    </section>
 
     <section class="download-grid" aria-label="STL downloads">
       <div class="download-card primary">
@@ -81,5 +107,6 @@
     <div class="pager"><a href="../../section-04-aircraft-servicing-and-permanent-survey-co.html">← Section 4: permanent survey control</a><a href="../../index.html">Manual home →</a></div>
   </article>
 </main>
+<script type="module" src="target-viewer.js"></script>
 </body>
 </html>
